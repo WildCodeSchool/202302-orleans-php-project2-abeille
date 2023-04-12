@@ -7,5 +7,5 @@
     
 }
 body {
-    color: #f76c6c;
+    color:var(--dark);
 }
