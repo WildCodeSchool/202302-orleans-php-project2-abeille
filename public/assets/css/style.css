@@ -1,13 +1,10 @@
-:root{
+[data-theme="light"],
+:root:not{
     --primary:#EEBA0B;
     --secondary:#671A06;
     --light:#f5f1e4;
     --dark:#230a04;
-    --fonttext:roboto;
-    --spacing:1rem;
-    --spacing2: calc(var(--spacing) *2);
-    --fontsizetext:2rem;
-    --fontsizetitle:3rem;
+    
 }
 body {
     color: #f76c6c;
