@@ -1,0 +1,10 @@
+h1{
+    text-align: center;
+    color: var(--primary);
+    font-family: 'DynaPuff', cursive;;
+}
+
+.container p{
+    max-width: 920px;
+    color: var(--primary);
+}

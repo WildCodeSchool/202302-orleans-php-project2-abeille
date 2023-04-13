@@ -1,5 +1,6 @@
-[data-theme="light"],
-:root:not{
+@import 'home.css';
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+:root:not([data-theme="dark"]), [data-theme="light"] {
     --primary:#EEBA0B;
     --secondary:#671A06;
     --light:#f5f1e4;
@@ -8,4 +9,5 @@
 }
 body {
     color:var(--dark);
+    background-color: var(--secondary);
 }
