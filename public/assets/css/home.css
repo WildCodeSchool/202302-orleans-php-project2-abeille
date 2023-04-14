@@ -1,10 +1,18 @@
-h1{
+h1, h2, h3{
     text-align: center;
     color: var(--primary);
-    font-family: 'DynaPuff', cursive;;
+    font-family: var(--fonttitle)
+}
+ul li{
+    color:var(--primary);
+    list-style: none;
 }
 
-.container p{
-    max-width: 920px;
-    color: var(--primary);
+section h2:last-of-type{
+    --typography-spacing-vertical:4.5rem;
+    margin-top: var(--typography-spacing-vertical);
+    margin-bottom: 2.5rem;
+}
+h2,h3{
+    font-size: 1.5rem;
 }
