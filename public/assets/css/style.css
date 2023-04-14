@@ -1,11 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
 [data-theme="light"],
-:root:not{
-    --primary:#EEBA0B;
-    --secondary:#671A06;
-    --light:#f5f1e4;
-    --dark:#230a04;
-    
+:root:not([data-theme="dark"]) {
+    --primary: #EEBA0B;
+    --secondary: #671A06;
+    --light: #f5f1e4;
+    --dark: #230a04;
 }
-body {
-    color:var(--dark);
+
+:root {
+    --font-title: 'DynaPuff', cursive;
+    --font-text: 'roboto';
+}
+
+body h1 {
+    color: var(--dark);
+}
+
+h1 {
+    font-family: var(--font-title);
+}
+
+p {
+    font-family: var(--font-text);
+}
+
+nav {
+    background-color: var(--primary);
+    margin: 0;
+    padding: 0.5rem;
+    height: 6rem;
+}
+
+
+nav img {
+    width: 3rem;
+}
+
+nav a {
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 1rem;
+}
+
+nav :where(a, [role="link"]) {
+    --nav-link-spacing-horizontal: 0.5rem;
+    margin: calc(var(--nav-link-spacing-vertical) * -1) calc(var(--nav-link-spacing-horizontal) * +0.5);
+}
+
+
+nav a:first-of-type:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+
+img {
+    width: 100%;
+    object-fit: cover;
 }
