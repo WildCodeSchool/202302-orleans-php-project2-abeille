@@ -1,11 +1,145 @@
-[data-theme="light"],
-:root:not{
+:root:not([data-theme=dark]), [data-theme=light] {
     --primary:#EEBA0B;
-    --secondary:#671A06;
+    --secondary:#321301;
     --light:#f5f1e4;
     --dark:#230a04;
-    
 }
+
 body {
     color:var(--dark);
 }
+
+body>footer {
+    --block-spacing-vertical:0;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary);
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 6.5vw;
+    width: 100vw;
+
+}
+
+.button-contact {
+    width: 12vw;
+    height: 3.7vw;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.button-faq {
+    width: 12vw;
+    height: 3.7vw;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.button-contact, .button-faq {
+    margin-bottom: 0.5vw;
+    margin-top: 0.5vw;
+}
+
+.reseaux {
+    display: flex;
+}
+
+.circle-logo {
+    margin-right: 3vw;
+}
+
+.circle-partenaire {
+    margin-left: 3vw;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+
+.partenaires {
+    display: flex;
+}
+
+.copyright{
+    font-size: 0.5rem;
+    color: black;
+    align-self: flex-end;
+    margin-bottom: 0.5vw;
+}
+
+svg {
+    fill: var(--secondary);
+}
+
+img {
+    max-width: none;
+}
+
+@media screen and (max-width: 600px){
+
+    body>footer {
+        gap: 1rem;
+        width: 25rem;
+        margin: 0;
+    }
+
+
+.button-contact {
+    width: 5rem;
+    height: 3rem;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.button-faq {
+    width: 5rem;
+    height: 3rem;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+
+.button-contact, .button-faq {
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem ;
+    font-size: 0.7rem;
+}
+
+.reseaux {
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.circle-logo {
+    margin-right: 1vw;
+}
+
+.circle-partenaire {
+    border: none;
+    margin-left: none;
+}
+
+img {
+    width: 20px;
+    height: 20px;
+}
+
+.partenaires {
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+    
+}
+
+
+
