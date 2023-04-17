@@ -1,41 +1,47 @@
 :root:not([data-theme=dark]), [data-theme=light] {
     --primary:#EEBA0B;
-    --secondary:#321301;
-    --light:#f5f1e4;
+    --secondary:#522B14;
+    --light:#FFF5D0;
     --dark:#230a04;
 }
 
-body {
-    color:var(--dark);
-}
 
-body>footer {
-    --block-spacing-vertical:0;
+
+.id_partenaire {
+    background-color: var(--light);
     display: flex;
     margin: 0;
     padding: 0;
-    background-color: var(--primary);
-    position: absolute;
-    bottom: 0;
     justify-content: center;
     align-items: center;
     gap: 6.5vw;
     width: 100vw;
+}
 
+.id_footer {
+    background-color: var(--secondary);
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
 }
 
 .button-contact {
     width: 12vw;
     height: 3.7vw;
-    background-color: var(--secondary);
-    color: var(--primary);
+    background-color: var(--primary);
+    color: var(--secondary);
+    margin-right: 5rem;
 }
 
 .button-faq {
     width: 12vw;
     height: 3.7vw;
-    background-color: var(--secondary);
-    color: var(--primary);
+    background-color: var(--primary);
+    color: var(--secondary);
+    margin-left: 5rem;
 }
 
 .button-contact, .button-faq {
@@ -48,11 +54,14 @@ body>footer {
 }
 
 .circle-logo {
-    margin-right: 3vw;
+    margin-right: 2vw;
+    margin-left: 2vw;
 }
 
 .circle-partenaire {
     margin-left: 3vw;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     border: 1px solid black;
     border-radius: 50%;
 }
@@ -64,13 +73,15 @@ body>footer {
 
 .copyright{
     font-size: 0.5rem;
-    color: black;
+    color: var(--light);
     align-self: flex-end;
     margin-bottom: 0.5vw;
+    margin-right: 6vw;
+    margin-left: 6vw;
 }
 
 svg {
-    fill: var(--secondary);
+    fill: var(--primary);
 }
 
 img {
@@ -79,22 +90,15 @@ img {
 
 @media screen and (max-width: 600px){
 
-    body>footer {
-        gap: 1rem;
-        width: 25rem;
-        margin: 0;
-    }
-
-
 .button-contact {
-    width: 5rem;
+    width: 4.8rem;
     height: 3rem;
     background-color: var(--secondary);
     color: var(--primary);
 }
 
 .button-faq {
-    width: 5rem;
+    width: 4.8rem;
     height: 3rem;
     background-color: var(--secondary);
     color: var(--primary);
@@ -105,12 +109,10 @@ img {
     margin-bottom: 0.3rem;
     margin-top: 0.3rem ;
     font-size: 0.7rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 
-.reseaux {
-    display: block;
-    margin-bottom: 0.2rem;
-}
 
 .circle-logo {
     margin-right: 1vw;
@@ -122,12 +124,11 @@ img {
 }
 
 img {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
 }
 
 .partenaires {
-    display: block;
     margin-bottom: 0.2rem;
 }
 
@@ -137,9 +138,13 @@ svg {
 }
 
 
+.copyright{
+
+    margin-right: 6vw;
+    margin-left: 6vw;
+}
 
     
 }
-
 
 
