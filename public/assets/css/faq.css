@@ -1,0 +1,14 @@
+p {
+    margin-inline-start: 2rem;
+}
+
+li {
+    margin: 1rem;
+    list-style-type: none;
+}
+
+h1 {
+    --faq-typography-spacing-vertical: 0.5rem;
+    margin: var(--faq-typography-spacing-vertical);
+    text-align: center;
+}

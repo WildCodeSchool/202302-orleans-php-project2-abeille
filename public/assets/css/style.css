@@ -1,11 +1,20 @@
-:root:not([data-theme=dark]), [data-theme=light] {
+@import 'home.css';
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+:root:not([data-theme="dark"]), [data-theme="light"] {
     --primary:#EEBA0B;
     --secondary:#522B14;
     --light:#FFF5D0;
     --dark:#230a04;
 }
 
+:root{
+    --fonttitle:'DynaPuff', cursive;
+}
 
+body {
+    color:var(--dark);
+    background-color: var(--secondary);
+}
 
 .id_partenaire {
     background-color: var(--light);
@@ -145,6 +154,7 @@ svg {
 }
 
     
-}
+
+
 
 
