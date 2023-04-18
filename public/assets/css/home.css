@@ -1,10 +1,10 @@
 h1, h2, h3{
     text-align: center;
-    color: var(--primary);
+    color: var(--secondary);
     font-family: var(--fonttitle)
 }
 ul li{
-    color:var(--primary);
+    color:var(--secondary);
     list-style: none;
 }
 
