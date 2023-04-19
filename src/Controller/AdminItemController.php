@@ -6,9 +6,6 @@ use App\Model\PartnerManager;
 
 class AdminItemController extends AbstractController
 {
-    /**
-     * List items
-     */
     public function index(): string
     {
         $partnerManager = new PartnerManager();
@@ -16,5 +13,4 @@ class AdminItemController extends AbstractController
 
         return $this->twig->render('Admin/Item/partner.html.twig', ['partners' => $partners]);
     }
-
 }
