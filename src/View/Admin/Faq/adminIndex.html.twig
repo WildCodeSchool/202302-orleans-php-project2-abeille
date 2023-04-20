@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+{% block title %}
+	{{parent()}}
+	Admin|Faq
+{% endblock %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/adminfaq.css">
+{% endblock %}
+{% block content %}
+	<h1>FAQ</h1>
+	<button><a href="/admin/faq/ajouter">{{ buttonName|default('Ajouter') }}</a></button>
+	{% for item in faq %}
+		<p>Question:<li>{{ item.question }}</li>
+		</p>
+		<p>Réponse:
+			<li>{{ item.answer}}</li>
+		</p>
+	{% endfor %}
+{% endblock %}

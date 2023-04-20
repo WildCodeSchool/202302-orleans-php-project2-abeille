@@ -14,6 +14,6 @@ class ResourceController extends AbstractController
         $faqManager = new FaqManager();
         $faq = $faqManager->selectAll();
 
-        return $this->twig->render('Resource/resource.html.twig', ['faq' => $faq]);
+        return $this->twig->render('Resource/index.html.twig', ['faq' => $faq]);
     }
 }
