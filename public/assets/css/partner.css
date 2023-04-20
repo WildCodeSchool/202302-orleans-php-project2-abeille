@@ -14,14 +14,6 @@
     --fonttitle: 'DynaPuff', cursive;
 }
 
-body {
-    background-color: var(--body);
-}
-
-.container, .container-fluid {
-    padding-right: 0;
-    padding-left: 0;
-}
 
 .id_partenaire {
     background-color: var(--light);
