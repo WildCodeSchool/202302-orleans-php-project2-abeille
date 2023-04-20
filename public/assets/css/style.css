@@ -1,0 +1,19 @@
+@import 'home.css';
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+:root:not([data-theme="dark"]),
+[data-theme="light"] {
+    --primary: #EEBA0B;
+    --secondary: #522B14;
+    --light: #FFF5D0;
+    --body: #FFFAE8;
+    --dark: #230a04;
+}
+
+:root {
+    --fonttitle: 'DynaPuff', cursive;
+}
+
+body {
+    background-color: var(--body);
+}
