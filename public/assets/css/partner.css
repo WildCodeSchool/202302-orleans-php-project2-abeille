@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
 
-.id_partenaire {
+.partner-section {
     background-color: var(--light);
     display: flex;
     margin: 0;
@@ -10,7 +10,7 @@
 }
 
 
-.circle-partenaire {
+.partner-circle {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-top: 0.5rem;
