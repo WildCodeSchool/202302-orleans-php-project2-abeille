@@ -1,84 +1,34 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-	<h1>L'association</h1>
-
-	<p>
-        Gravida hendrerit pretium conubia eros habitant senectus varius potenti egestas pellentesque dis congue sollicitudin parturient taciti vel justo semper litora.
-		Ridiculus class ultricies massa bibendum parturient mollis hac torquent faucibus consequat vivamus non pellentesque ullamcorper ultricies laoreet id ornare libero.
-		Praesent consequat cras ridiculus suscipit velit potenti suspendisse integer fusce ipsum rutrum aliquet tempus laoreet lacinia consequat convallis ultrices est.
-		Ullamcorper pharetra himenaeos tincidunt convallis molestie dapibus facilisis ultrices hendrerit pellentesque eros purus pulvinar dis ornare magna semper sit sem.
-		Penatibus tincidunt accumsan molestie nisi nulla mauris at tristique nascetur tincidunt diam consequat vivamus ad vitae maecenas phasellus pulvinar blandit.
-	</p>
-	
-    <h1>Tous les évènements</h1>
 
 	<section>
-		<article>
-			<h2>Évènement 1</h2>
-			<img src="" alt=""/>
-			<p>L'évènement 1 s'est déroulé...</p>
-			<a href="">Voir plus...</a>
-		</article>
-        <article>
-			<h2>Évènement 2</h2>
-			<img src="" alt=""/>
-			<p>L'évènement 2 s'est déroulé...</p>
-			<a href="">Voir plus...</a>
-		</article>
-        <article>
-			<h2>Évènement 3</h2>
-			<img src="" alt=""/>
-			<p>L'évènement 3 s'est déroulé...</p>
-			<a href="">Voir plus...</a>
-		</article>
-		<article>
-			<h2>Évènement 4</h2>
-			<img src="" alt=""/>
-			<p>L'évènement 2 s'est déroulé...</p>
-			<a href="">Voir plus...</a>
-		</article>
-		<article>
-			<h2>Évènement 5</h2>
-			<img src="" alt=""/>
-			<p>L'évènement 5 s'est déroulé...</p>
-			<a href="">Voir plus...</a>
-		</article>
-    </section>
+		<h1>L'association</h1>
+		<p>
+			Gravida hendrerit pretium conubia eros habitant senectus varius potenti egestas pellentesque dis congue sollicitudin parturient taciti vel justo semper litora.
+			Ridiculus class ultricies massa bibendum parturient mollis hac torquent faucibus consequat vivamus non pellentesque ullamcorper ultricies laoreet id ornare libero.
+			Praesent consequat cras ridiculus suscipit velit potenti suspendisse integer fusce ipsum rutrum aliquet tempus laoreet lacinia consequat convallis ultrices est.
+			Ullamcorper pharetra himenaeos tincidunt convallis molestie dapibus facilisis ultrices hendrerit pellentesque eros purus pulvinar dis ornare magna semper sit sem.
+			Penatibus tincidunt accumsan molestie nisi nulla mauris at tristique nascetur tincidunt diam consequat vivamus ad vitae maecenas phasellus pulvinar blandit.
+		</p>
+	</section>
+	<section>
+		<h1>Tous les évènements</h1>
+		<div class="events">
+			<article>
+				<h2>Évènement 1</h2>
+				<img src="" alt=""/>
+				<p>L'évènement 1 s'est déroulé...</p>
+				<a href="">Voir plus...</a>
+			</section>
+
+			{% for event in events %}
+				{{ article }}
+			{% endfor %}
+
+		{% endblock %}
 
 
-<?php
-
-$events = [
-	'
-]
-
-
-foreach($events as event)
-{
-	echo 'article';
-	echo 'h2';
-	echo 'p';
-
-}
-
-foreach ($evenements as $evenement) {
-    echo '<article>';
-    echo '<h2>' . $evenement["titre"] . '</h2>';
-    echo '<img src="' . $evenement["image"] . '" alt=""/>';
-    echo '<p>' . $evenement["description"] . '</p>';
-    echo '<a href="' . $evenement["lien"] . '">Voir plus...</a>';
-    echo '</article>';
-}
-
-
-{% endblock %}
-
-
-
-
-
-{#avec un foreach, ouvrir une balise article et afficher l'image,
-le nom et un bouton 'voir plus' qui récupère l'id de l'événement en BDD.
-Cela affiche dans une autre page l'événement voulu grâce à son ID.#}
-
+		{#avec un foreach, ouvrir une balise article et afficher l'image,
+			le nom et un bouton 'voir plus' qui récupère l'id de l'événement en BDD.
+			Cela affiche dans une autre page l'événement voulu grâce à son ID.#}
