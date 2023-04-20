@@ -11,4 +11,9 @@ class HomeController extends AbstractController
     {
         return $this->twig->render('Home/index.html.twig');
     }
+
+    public function association(): string
+    {
+        return $this->twig->render('Home/association.html.twig');
+    }
 }

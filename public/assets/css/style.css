@@ -2,15 +2,16 @@
 
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
-    --primary: #EEBA0B;
-    --secondary: #671A06;
-    --light: #f5f1e4;
+    --primary: #F7CD46;
+    --secondary: #522b14;
+    --light: #fff5d0;
     --dark: #230a04;
 }
 
 :root {
     --font-title: 'DynaPuff', cursive;
     --font-text: 'roboto';
+    color: var(--dark);
 }
 
 body h1 {
@@ -23,10 +24,11 @@ h1 {
 
 p {
     font-family: var(--font-text);
+    color: var(--dark);
 }
 
 nav {
-    background-color: var(--primary);
+    background-color: var(--secondary);
     margin: 0;
     padding: 0.5rem;
     height: 6rem;
@@ -34,12 +36,12 @@ nav {
 
 
 nav img {
-    width: 3rem;
+    width: 4rem;
 }
 
 nav a {
-    background-color: var(--primary);
-    color: var(--secondary);
+    background-color: var(--secondary);
+    color: var(--light);
     padding: 1rem;
 }
 
@@ -49,9 +51,10 @@ nav :where(a, [role="link"]) {
 }
 
 
-nav a:first-of-type:hover {
-    background-color: var(--secondary);
-    color: var(--primary);
+
+nav > ul:not(:first-child) a:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
 }
 
 
