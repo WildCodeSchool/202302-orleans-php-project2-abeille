@@ -46,20 +46,12 @@ body {
     width: 100vw;
 }
 
-.button-contact {
+button {
     width: 12rem;
     height: 3rem;
     background-color: var(--primary);
     color: var(--secondary);
     margin-right: 5rem;
-}
-
-.button-faq {
-    width: 12rem;
-    height: 3rem;
-    background-color: var(--primary);
-    color: var(--secondary);
-    margin-left: 5rem;
 }
 
 .button-contact,
