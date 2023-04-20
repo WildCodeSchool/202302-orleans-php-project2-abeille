@@ -19,5 +19,4 @@ return [
     'resource' => ['ResourceController', 'index',],
     'admin/faq/index' => ['AdminFaqController', 'index',],
     'admin/faq/ajouter' => ['AdminFaqController', 'add',],
-
 ];
