@@ -10,7 +10,3 @@
 :root {
     --fonttitle: 'DynaPuff', cursive;
 }
-
-body {
-    color:var(--dark);
-}
