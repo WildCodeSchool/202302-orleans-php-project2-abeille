@@ -22,7 +22,7 @@ class AdminFaqController extends AbstractController
         }
 
         if (empty($faq['answer'])) {
-            $errors[] = 'Le champ prix est obligatoire';
+            $errors[] = 'Le champ réponse est obligatoire';
         }
         return $errors;
     }

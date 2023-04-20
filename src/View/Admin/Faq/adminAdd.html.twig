@@ -14,12 +14,12 @@
 			{% endfor %}
 		</ul>
 		<form action="" method="post">
-			<label for="question">Question:
+			<label for="question">Question
 			</label>
-			<input type="text" value="{{ item.question }}" name="question">
-			<label for="answer">Reponse:
+			<textarea type="text" {{ item.question }} name="question" id="question" required></textarea>
+			<label for="answer">Reponse
 			</label>
-			<textarea type="text" value="{{ item.answer}}" name="answer" id="answer"></textarea>
+			<textarea type="text" {{ item.answer}} name="answer" id="answer" required></textarea>
 			<button>Ajouter</button>
 		</form>
 		<a href="/admin/faq/index">Retour</a>
