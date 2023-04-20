@@ -62,6 +62,18 @@ ALTER TABLE `item`
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
+CREATE TABLE event (
+  `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  `description` TEXT NOT NULL,
+  `location` VARCHAR(150),
+  `date` DATE NOT NULL);
+
+INSERT INTO event (name,description,location,date) VALUES('Visite de nos ruches','Nous allons visiter nos ruches et expliquer au différents visteur comme cela fonctionne.','Olivet Domaine de l‘Abeille Olivétaine.',20230422);
+
+INSERT INTO event (name,description,location,date) VALUES('Création de Ruches','Nous Allons créé des Ruches dans notre nouveau domaines','Olivet Domaine Jean Pernaud',20230710);
+
+INSERT INTO event (name,description,location,date) VALUES('Découverte des abeilles','Nous allons faire découvrir les abeilles à nos visiteurs','Olivet Domaine de l’Abeille Olivetaine',20230510);
 
 CREATE TABLE `faq` (
   `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
