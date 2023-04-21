@@ -9,9 +9,9 @@ class AdminFaqController extends AbstractController
     public function index(): string
     {
         $faqManager = new FaqManager();
-        $faq = $faqManager->selectAll();
+        $faqs = $faqManager->selectAll();
 
-        return $this->twig->render('Admin/Faq/adminIndex.html.twig', ['faq' => $faq]);
+        return $this->twig->render('Admin/Faq/adminIndex.html.twig', ['faq' => $faqs]);
     }
 
     private function validate(array $faq): array
@@ -33,12 +33,9 @@ class AdminFaqController extends AbstractController
         $errors = [];
         $faq = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // clean $_POST data
             $faq = array_map('trim', $_POST);
-
-            // TODO validations (length, format...)
             $errors = $this->validate($faq);
-            // if validation is ok, insert and redirection
+
             if (empty($errors)) {
                 $faqManager = new FaqManager();
                 $faq = $faqManager->insert($faq);
