@@ -56,7 +56,11 @@ nav > ul:not(:first-child) a:hover {
     color: var(--secondary);
 }
 
-img {
+.image {
     width: 100%;
     object-fit: cover;
+}
+
+.container {
+    padding-bottom: 0;
 }

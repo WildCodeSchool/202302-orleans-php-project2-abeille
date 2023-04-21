@@ -7,18 +7,12 @@ use App\Model\HomeManager;
 
 class HomeController extends AbstractController
 {
-    public function partner(): string
-    {
-        $partnerManager = new PartnerManager();
-        $partners = $partnerManager->selectAll();
-
-        return $this->twig->render('Home/index.html.twig', ['partners' => $partners]);
-    }
-
     public function index(): string
     {
         $homeManager = new HomeManager();
         $event = $homeManager->lastEvent();
-        return $this->twig->render('Home/index.html.twig', ['events' => $event]);
+        $partnerManager = new PartnerManager();
+        $partners = $partnerManager->selectAll();
+        return $this->twig->render('Home/index.html.twig', ['events' => $event, 'partners'=>$partners]);
     }
 }
