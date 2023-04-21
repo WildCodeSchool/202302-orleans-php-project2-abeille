@@ -13,6 +13,6 @@ class HomeController extends AbstractController
         $event = $homeManager->lastEvent();
         $partnerManager = new PartnerManager();
         $partners = $partnerManager->selectAll();
-        return $this->twig->render('Home/index.html.twig', ['events' => $event, 'partners'=>$partners]);
+        return $this->twig->render('Home/index.html.twig', ['events' => $event, 'partners' => $partners]);
     }
 }
