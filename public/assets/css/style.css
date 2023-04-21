@@ -5,6 +5,8 @@
     --primary: #F7CD46;
     --secondary: #522b14;
     --light: #fff5d0;
+    --body: #FFFAE8;
+    --dark: #230a04;
     --dark: #230a04;
 }
 
@@ -34,7 +36,6 @@ nav {
     height: 6rem;
 }
 
-
 nav img {
     width: 4rem;
 }
@@ -50,13 +51,10 @@ nav :where(a, [role="link"]) {
     margin: calc(var(--nav-link-spacing-vertical) * -1) calc(var(--nav-link-spacing-horizontal) * +0.5);
 }
 
-
-
 nav > ul:not(:first-child) a:hover {
     background-color: var(--primary);
     color: var(--secondary);
 }
-
 
 img {
     width: 100%;

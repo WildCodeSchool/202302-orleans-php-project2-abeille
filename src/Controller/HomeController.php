@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Model\HomeManager;
+
 class HomeController extends AbstractController
 {
     /**
@@ -9,11 +11,8 @@ class HomeController extends AbstractController
      */
     public function index(): string
     {
-        return $this->twig->render('Home/index.html.twig');
-    }
-
-    public function association(): string
-    {
-        return $this->twig->render('Home/association.html.twig');
+        $homeManager = new HomeManager();
+        $event = $homeManager->lastEvent();
+        return $this->twig->render('Home/index.html.twig', ['events' => $event]);
     }
 }
