@@ -88,7 +88,7 @@ INSERT INTO `faq` (`question`, `answer`) VALUES
 CREATE TABLE `partner` (
   `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `name` VARCHAR(255) NOT NULL,
-  `link` VARCHAR(555) NOT NULL,
+  `link` VARCHAR(555) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
