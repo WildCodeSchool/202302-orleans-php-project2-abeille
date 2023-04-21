@@ -1,13 +1,9 @@
 <section class="partner-section">
 	<div class="partners">
-		<div class="partner-circle">
-			<a href="https://www.abeillesentinelle.net/" target="_blank"><img src="/assets/images/AbeilllesSentinelles.png" width="70" height="70"></a>
-		</div>
-		<div class="partner-circle">
-			<a href="https://www.apiculture.net/" target="_blank"><img src="/assets/images/beefriend.webp" width="70" height="70"></a>
-		</div>
-		<div class="partner-circle">
-			<a href="https://www.anses.fr/fr/content/sant%C3%A9-des-abeilles" target="_blank"><img src="/assets/images/logo:abeilles.png" width="70" height="70"></a>
-		</div>
+		{% for partner in partners %}
+			<div class="partner-circle">
+			<a href="{{partner.link}}" target="_blank"><img src="assets/images/{{partner.logo}}" width="70" height="70"></a>
+			</div>
+		{% endfor %}
 	</div>
 </section>

@@ -64,11 +64,10 @@ ALTER TABLE `item`
 
 CREATE TABLE `partner` (
   `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  `name` VARCHAR(255) NOT NULL,
-  `link` VARCHAR(555) NOT NULL,
-  `logo` VARCHAR(555) NOT NULL,
+  `link` TEXT NOT NULL,
+  `logo` TEXT NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
-INSERT INTO `partner` (`name`, `link`) VALUES
-('Abeille Sentinelle', 'https://www.abeillesentinelle.net/', 'public/assets/images/AbeilllesSentinelles.png'), ('Apiculture Univers du miel', 'https://www.apiculture.net/', 'public/assets/images/beefriend.webp'), ('Anses Santé des abeilles', 'https://www.anses.fr/fr/content/sant%C3%A9-des-abeilles', 'public/assets/images/logo:abeilles.png');
+INSERT INTO `partner` (`link`, `logo`) VALUES
+('https://www.abeillesentinelle.net/', 'AbeilllesSentinelles.png'), ('https://www.apiculture.net/', 'beefriend.webp'), ('https://www.anses.fr/fr/content/sant%C3%A9-des-abeilles', 'logoabeilles.png');
