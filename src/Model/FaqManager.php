@@ -7,7 +7,6 @@ use PDO;
 class FaqManager extends AbstractManager
 {
     public const TABLE = 'faq';
-  
     public function insert(array $faqs): int
     {
         $statement = $this->pdo->prepare(
