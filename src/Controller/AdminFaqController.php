@@ -9,42 +9,43 @@ class AdminFaqController extends AbstractController
     public function index(): string
     {
         $faqManager = new FaqManager();
-        $faq = $faqManager->selectAll();
+        $faqs = $faqManager->selectAll();
 
-        return $this->twig->render('Admin/Faq/adminIndex.html.twig', ['faq' => $faq]);
+        return $this->twig->render('Admin/Faq/adminIndex.html.twig', ['faq' => $faqs]);
     }
-    private function validate(array $faq): array
+
+    private function validate(array $faqs): array
     {
         $errors = [];
 
-        if (empty($faq['question'])) {
+        if (empty($faqs['question'])) {
             $errors[] = 'Le champ question est obligatoire';
         }
 
-        if (empty($faq['answer'])) {
+        if (empty($faqs['answer'])) {
             $errors[] = 'Le champ réponse est obligatoire';
         }
         return $errors;
     }
+
     public function add(): ?string
     {
         $errors = [];
-        $faq = [];
+        $faqs = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // clean $_POST data
-            $faq = array_map('trim', $_POST);
+            $faqs = array_map('trim', $_POST);
 
             // TODO validations (length, format...)
-            $errors = $this->validate($faq);
+            $errors = $this->validate($faqs);
             // if validation is ok, insert and redirection
             if (empty($errors)) {
                 $faqManager = new FaqManager();
-                $faq = $faqManager->insert($faq);
+                $faqs = $faqManager->insert($faqs);
 
                 header('Location:/admin/faq/ajouter');
             }
         }
-
-        return $this->twig->render('Admin/Faq/adminAdd.html.twig', ['errors' => $errors, 'faq' => $faq]);
+        return $this->twig->render('Admin/Faq/adminAdd.html.twig', ['errors' => $errors, 'faq' => $faqs]);
     }
 }
