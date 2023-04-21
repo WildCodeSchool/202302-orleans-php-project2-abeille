@@ -1,20 +1,62 @@
-@import 'home.css';
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
 
-:root:not([data-theme="dark"]),
-[data-theme="light"] {
-    --primary: #EEBA0B;
-    --secondary: #522B14;
-    --light: #FFF5D0;
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+    --primary: #F7CD46;
+    --secondary: #522b14;
+    --light: #fff5d0;
     --body: #FFFAE8;
+    --dark: #230a04;
     --dark: #230a04;
 }
 
 :root {
-    --fonttitle: 'DynaPuff', cursive;
+    --font-title: 'DynaPuff', cursive;
+    --font-text: 'roboto';
+    color: var(--dark);
 }
 
-body {
-    background-color: var(--body);
+body h1 {
+    color: var(--dark);
 }
 
+h1 {
+    font-family: var(--font-title);
+}
+
+p {
+    font-family: var(--font-text);
+    color: var(--dark);
+}
+
+nav {
+    background-color: var(--secondary);
+    margin: 0;
+    padding: 0.5rem;
+    height: 6rem;
+}
+
+nav img {
+    width: 4rem;
+}
+
+nav a {
+    background-color: var(--secondary);
+    color: var(--light);
+    padding: 1rem;
+}
+
+nav :where(a, [role="link"]) {
+    --nav-link-spacing-horizontal: 0.5rem;
+    margin: calc(var(--nav-link-spacing-vertical) * -1) calc(var(--nav-link-spacing-horizontal) * +0.5);
+}
+
+nav > ul:not(:first-child) a:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
