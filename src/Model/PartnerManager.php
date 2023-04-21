@@ -7,4 +7,4 @@ use PDO;
 class PartnerManager extends AbstractManager
 {
     public const TABLE = 'partner';
-}   
+}

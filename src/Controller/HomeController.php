@@ -14,7 +14,6 @@ class HomeController extends AbstractController
         $partnerManager = new PartnerManager();
         $partners = $partnerManager->selectAll();
 
-        return $this->twig->render('Home/index.html.twig', ['partners'=>$partners]);
-
+        return $this->twig->render('Home/index.html.twig', ['partners' => $partners]);
     }
 }
