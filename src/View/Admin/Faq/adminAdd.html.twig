@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 {% block title %}
 	{{parent()}}
-	|Faq|Ajout
+	| Faq | Ajout
 {% endblock %}
 {% block content %}
 	<main class="container">
@@ -15,7 +15,7 @@
 			<label for="question">Question
 			</label>
 			<textarea type="text" name="question" id="question" required>{{ faq.question }}</textarea>
-			<label for="answer">Reponse
+			<label for="answer">Réponse
 			</label>
 			<textarea type="text" name="answer" id="answer" required>{{ faq.answer }}</textarea>
 			<button>Ajouter</button>
