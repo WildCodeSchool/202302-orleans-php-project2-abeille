@@ -72,3 +72,14 @@ CREATE TABLE `faq` (
 INSERT INTO `faq` (`question`, `answer`) VALUES
 ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac erat dui. In placerat orci. ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt.'),
 ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet arcu id eros suscipit ornare et eget urna. Vivamus. ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel odio id elit tempor semper.');
+
+CREATE TABLE `partner` (
+  `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  `name` VARCHAR(255) NOT NULL,
+  `link` VARCHAR(555) NOT NULL,
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `partner` (`name`, `link`) VALUES
+('Abeille Sentinelle', 'https://www.abeillesentinelle.net/', 'public/assets/images/AbeilllesSentinelles.png'), ('Apiculture Univers du miel', 'https://www.apiculture.net/', 'public/assets/images/beefriend.webp'), ('Anses Santé des abeilles', 'https://www.anses.fr/fr/content/sant%C3%A9-des-abeilles');
+
