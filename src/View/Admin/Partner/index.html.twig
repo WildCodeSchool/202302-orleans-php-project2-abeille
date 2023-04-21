@@ -1,0 +1,27 @@
+{% block stylesheet %}
+	<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+	<link rel="stylesheet" href="/assets/css/admin.partner.css">
+
+{% endblock %}
+
+{% block content %}
+	<main class="container">
+    <h1>Administration des partenaires</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Nom</th>
+					<th>Lien</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for partner in partners %}
+					<tr>
+						<td>{{ partner.name }}</td>
+						<td>{{ partner.link }}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</main>
+{% endblock %}

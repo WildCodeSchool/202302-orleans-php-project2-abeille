@@ -1,9 +1,44 @@
+<<<<<<< HEAD
 {% extends 'layout.html.twig' %}
 {% block stylesheet %}
 <link rel="stylesheet" href="/assets/css/partner.css">
 {% endblock %}
 {% block content %}
-    <h1>Hello Wilder !</h1>
-    <p>Find a complete CRUD example on <a href="/items">/items</a> page.</p>
-    {% block partner %}{% include "Home/_partner.html.twig" %}{% endblock %}
+	<main class="container">
+		<section>
+			<h1>Présentation :</h1>
+			<h2>L’abeille olivetaine a pour objectifs :</h2>
+			<ul>
+				<li>De s’adresser à tous</li>
+				<li>De favoriser et de promouvoir le développement et la connaissance de l’abeille et de son  habitat</li>
+				<li>De favoriser et de promouvoir le développement de l’apiculture à Olivet et environs</li>
+			</ul>
+			<h2>Ces objectifs sont atteints :</h2>
+			<ul>
+				<li>Par de l’information,</li>
+				<li>Par de la communication aux jeunes en particulier,</li>
+				<li>Par l’organisation et / ou la participation à des manifestations</li>
+				<li>Par de la formation théorique et pratique à l’abeille et l’apiculture</li>
+				<li>
+					Par de la gestion de petits «ruchers associatifs » : accueil et exploitation des ruches de    l’abeille olivetaine ou de ruches des membres de l’association.
+				</li>
+				<li>Par du conseil et de l’assistance aux nouveaux apiculteurs en particulier</li>
+			</ul>
+		</section>
+        <section>
+            <h1> Nos derniers évènements</h1>
+            <div class="grid">
+            {% for event in events %}
+                <article class='container_fluid'>
+                    <img src="{{event.image ?? 'assets/images/placeholder.jpg'}}" alt='image event'>
+                    <p> {{date(event.date)|date("d/m/Y")}}</p>
+                    <h2> {{event.name}}</h2>
+                    <p>{{event.location}}</p>
+                    <p> {{event.description}}</p>
+                </article>
+            {% endfor %}
+            </div>
+        </section>
+	</main>
+		{% block partner %}{% include "Home/_partner.html.twig" %}{% endblock %}
 {% endblock %}
