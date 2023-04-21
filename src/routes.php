@@ -15,6 +15,5 @@ return [
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
     'resource' => ['ResourceController', 'index',],
-    'admin/faq/index' => ['AdminFaqController', 'index',],
     'admin/faq/ajouter' => ['AdminFaqController', 'add',],
 ];
