@@ -1,0 +1,12 @@
+button {
+    width: 10rem;
+}
+
+li a {
+    text-decoration: none;
+}
+
+li {
+    margin: 1rem;
+    list-style-type: none;
+}
