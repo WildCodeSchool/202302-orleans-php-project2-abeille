@@ -1,0 +1,105 @@
+
+
+body>footer {
+    padding: 0;
+}
+
+.container, .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.id_footer {
+    background-color: var(--secondary);
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 6rem;
+}
+
+button {
+    width: 12rem;
+    height: 3rem;
+    background-color: var(--primary);
+    color: var(--secondary);
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+button:hover {
+    background-color: var(--light);
+}
+
+.button-contact,
+.button-faq {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.reseaux {
+    display: flex;
+}
+
+.circle-logo {
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: var(--light);
+    align-self: flex-end;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+
+svg {
+    fill: var(--primary);
+}
+
+img {
+    max-width: none;
+}
+
+@media screen and (max-width: 600px) {
+
+    .button-contact {
+        width: 4.8rem;
+        height: 3rem;
+        background-color: var(--secondary);
+        color: var(--primary);
+    }
+
+    .button-faq {
+        width: 4.8rem;
+        height: 3rem;
+        background-color: var(--secondary);
+        color: var(--primary);
+    }
+
+    .button-contact,
+    .button-faq {
+        background-color: var(--primary);
+        color: var(--secondary);
+        margin-bottom: 0.3rem;
+        margin-top: 0.3rem;
+    }
+
+    svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .copyright {
+        justify-content: center;
+        color: var(--primary);
+        font-size: 0.5rem;
+        margin-left: 0.2rem;
+    }
+
+}
+
