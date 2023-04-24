@@ -31,9 +31,11 @@
                 <article class='container_fluid'>
                     <img class="image" src="{{event.image ?? 'assets/images/placeholder.jpg'}}" alt='image event'>
                     <p> {{date(event.date)|date("d/m/Y")}}</p>
-                    <h2> {{event.name}}</h2>
-                    <p>{{event.location}}</p>
-                    <p> {{event.description}}</p>
+                    <div class="card">
+                        <h2> {{event.name}}</h2>
+                        <p>{{event.location}}</p>
+                        <p> {{event.description}}</p>   
+                    </div>
                 </article>
             {% endfor %}
             </div>
