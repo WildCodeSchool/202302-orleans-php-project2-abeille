@@ -1,0 +1,23 @@
+
+.partner-section {
+    background-color: var(--light);
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 6.5vw;
+}
+
+.partner-circle {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.partners {
+    display: flex;
+}
+

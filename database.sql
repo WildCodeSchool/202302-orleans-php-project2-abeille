@@ -62,6 +62,16 @@ ALTER TABLE `item`
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
+CREATE TABLE `partner` (
+  `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  `link` TEXT NOT NULL,
+  `logo` TEXT NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `partner` (`link`, `logo`) VALUES
+('https://www.abeillesentinelle.net/', 'AbeilllesSentinelles.png'), ('https://www.apiculture.net/', 'beefriend.webp'), ('https://www.anses.fr/fr/content/sant%C3%A9-des-abeilles', 'logoabeilles.png');
+
 CREATE TABLE event (
   `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
@@ -85,6 +95,7 @@ INSERT INTO `faq` (`question`, `answer`) VALUES
 ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac erat dui. In placerat orci. ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt.'),
 ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet arcu id eros suscipit ornare et eget urna. Vivamus. ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel odio id elit tempor semper.');
 
+
 CREATE TABLE `partner` (
   `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `name` VARCHAR(255) NOT NULL,
@@ -94,4 +105,5 @@ CREATE TABLE `partner` (
 
 INSERT INTO `partner` (`name`, `link`) VALUES
 ('Abeille Sentinelle', 'https://www.abeillesentinelle.net/', 'public/assets/images/AbeilllesSentinelles.png'), ('Apiculture Univers du miel', 'https://www.apiculture.net/', 'public/assets/images/beefriend.webp'), ('Anses Santé des abeilles', 'https://www.anses.fr/fr/content/sant%C3%A9-des-abeilles');
+
 
