@@ -1,12 +1,16 @@
-button {
-    width: 10rem;
-}
-
-li a {
-    text-decoration: none;
+button a {
+    color: var(--dark);
 }
 
 li {
-    margin: 1rem;
-    list-style-type: none;
+    list-style: none;
 }
+
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+}
+

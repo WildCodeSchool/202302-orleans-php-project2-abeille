@@ -11,7 +11,7 @@ class AdminFaqController extends AbstractController
         $faqManager = new FaqManager();
         $faqs = $faqManager->selectAll();
 
-        return $this->twig->render('Admin/Faq/adminIndex.html.twig', ['faq' => $faqs]);
+        return $this->twig->render('Admin/Faq/adminIndex.html.twig', ['faqs' => $faqs]);
     }
 
     private function validate(array $faq): array
