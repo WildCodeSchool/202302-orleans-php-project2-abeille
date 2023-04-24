@@ -18,4 +18,5 @@ return [
     'resource' => ['ResourceController', 'index',],
     'admin/partenaire' => ['AdminPartnerController', 'index',],
     'admin/faq/ajouter' => ['AdminFaqController', 'add',],
+    'admin/faq/index' => ['AdminFaqController', 'index',],
 ];
