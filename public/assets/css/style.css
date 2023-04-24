@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
-
+@import 'home.css';
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
     --primary: #F7CD46;
@@ -12,7 +12,6 @@
 
 :root {
     --font-title: 'DynaPuff', cursive;
-    --font-text: 'roboto';
     color: var(--dark);
 }
 
@@ -25,7 +24,6 @@ h1 {
 }
 
 p {
-    font-family: var(--font-text);
     color: var(--dark);
 }
 
