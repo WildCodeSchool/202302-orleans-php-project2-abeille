@@ -17,9 +17,7 @@ class AdminPartnerController extends AbstractController
     public function create(): string
     {
         $errors = [];
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
             $partner = array_map('trim', $_POST);
 
             if (empty($partner['logo'])) {
@@ -40,8 +38,7 @@ class AdminPartnerController extends AbstractController
                 $errors[] = 'Le champ lien doit faire moins de ' . $maxLenght . ' caractères';
             }
 
-            if (!empty($errors))
-            {
+            if (!empty($errors)) {
                 $partnerManager = new PartnerManager();
                 $partnerManager->insert($partner);
                 header('Location: /admin/partenaire');
