@@ -16,7 +16,7 @@ class AdminPartnerController extends AbstractController
 
     public function create(): string
     {
-        $errors = [];
+        $errors = $partner = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $partner = array_map('trim', $_POST);
 
@@ -38,12 +38,15 @@ class AdminPartnerController extends AbstractController
                 $errors[] = 'Le champ lien doit faire moins de ' . $maxLenght . ' caractères';
             }
 
-            if (!empty($errors)) {
+            if (empty($errors)) {
                 $partnerManager = new PartnerManager();
                 $partnerManager->insert($partner);
                 header('Location: /admin/partenaire');
             }
         }
-        return $this->twig->render('Admin/Partner/create.html.twig', []);
+        return $this->twig->render('Admin/Partner/create.html.twig', [
+            'errors' => $errors,
+            'partner' => $partner,
+        ]);
     }
 }

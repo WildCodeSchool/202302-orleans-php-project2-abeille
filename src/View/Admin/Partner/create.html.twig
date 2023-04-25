@@ -7,18 +7,21 @@
 {% block content %}
 	<main class="container">
 		<h1>Ajouter un partenaire</h1>
-
-
+		<ul class="errors">
+			{% for error in errors %}
+			<li> {{ error }} </li>
+			{% endfor %}
+		</ul>
 		<form action="" method="POST">
 
 			<label for="logo">URL du logo</label>
-			<input type="text" id="logo" name="logo" required>
+			<input type="text" id="logo" name="logo" required value=" {{ partner.logo }}">
 
 			<label for="lien">URL du site</label>
-			<input type="text" id="link" name="link" required>
+			<input type="text" id="link" name="link" required value=" {{ partner.link }}">
 
-        <button>Ajouter</button> 
+			<button>Ajouter</button>
 		</form>
-
+		<a href="/admin/partenaire">Retour</a>
 	</main>
 {% endblock %}
