@@ -17,6 +17,7 @@ return [
     'partner' => ['PartnerController', 'index'],
     'resource' => ['ResourceController', 'index',],
     'admin/partenaire' => ['AdminPartnerController', 'index',],
+    'admin/partenaire/ajouter' => ['AdminPartnerController', 'create',],
     'admin/faq/ajouter' => ['AdminFaqController', 'add',],
-    'admin/faq/index' => ['AdminFaqController', 'index',],
+    'admin/faq/index' => ['AdminFaqController', 'create',],
 ];
