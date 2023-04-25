@@ -19,5 +19,5 @@ return [
     'admin/partenaire' => ['AdminPartnerController', 'index',],
     'admin/partenaire/ajouter' => ['AdminPartnerController', 'create',],
     'admin/faq/ajouter' => ['AdminFaqController', 'add',],
-    'admin/faq/index' => ['AdminFaqController', 'create',],
+    'admin/faq/index' => ['AdminFaqController', 'index',],
 ];
