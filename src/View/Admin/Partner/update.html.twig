@@ -10,16 +10,7 @@
 		<h1>Modifier le partenaire
 			{{ partner.name }}</h1>
 
-		<form action="" method="POST">
-
-			<label for="nom">Nom du site</label>
-			<input type="text" id="name" name="name" required value=" {{ partner.name }}">
-
-			<label for="lien">URL du site</label>
-			<input type="text" id="link" name="link" required value=" {{ partner.link }}">
-
-			<button>Ajouter</button>
-		</form>
+		{% include 'Admin/Partner/_form.html.twig' %}
 
 		<a href="/admin/partenaire">Retour</a>
 	</main>
