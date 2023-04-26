@@ -2,7 +2,7 @@
 	<div class="partners">
 		{% for partner in partners %}
 			<div class="partner-circle">
-			<a href="{{partner.link}}" target="_blank"><img src="assets/images/{{partner.logo}}" width="70" height="70"></a>
+			<a href="{{partner.link}}" target="_blank"><img alt="" src="{{event.image ?? 'assets/images/placehold.png'}}" width="70" height="70"></a>
 			</div>
 		{% endfor %}
 	</div>

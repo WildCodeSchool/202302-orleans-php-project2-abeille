@@ -21,3 +21,21 @@
     display: flex;
 }
 
+h1 {
+    color: var(--secondary);
+}
+
+body {
+    background-color: var(--light);
+}
+
+th, td, label{
+    color: var(--secondary);
+}
+
+li {
+    color: var(--secondary);
+}
+
+
+
