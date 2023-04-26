@@ -1,11 +1,3 @@
-:root:not([data-theme="dark"]) {
-    --primary: #F7CD46;
-    --secondary: #522b14;
-    --light: #fff5d0;
-    --body: #FFFAE8;
-    --dark: #230a04;
-    --dark: #230a04;
-}
 
 .partner-section {
     background-color: var(--light);

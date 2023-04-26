@@ -43,6 +43,10 @@ class AdminPartnerController extends AbstractController
                 $errors[] = 'Le champ nom doit faire moins de ' . $maxLength . ' caractères';
             }
 
+            if (!filter_var($partner['link'], FILTER_VALIDATE_URL)) {
+                $errors[] = "L'URL n'est pas valide";
+            }
+
             if (empty($errors)) {
                 $partnerManager = new PartnerManager();
                 $partnerManager->insert($partner);
