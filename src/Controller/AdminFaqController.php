@@ -45,4 +45,14 @@ class AdminFaqController extends AbstractController
         }
         return $this->twig->render('Admin/Faq/adminAdd.html.twig', ['errors' => $errors, 'faq' => $faq]);
     }
+
+    public function delete(int $id): void
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $faqManager = new FaqManager();
+            $faqManager->delete((int)$id);
+
+            header('Location:/admin/faq/index');
+        }
+    }
 }
