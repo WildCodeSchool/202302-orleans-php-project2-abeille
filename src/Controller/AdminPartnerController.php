@@ -15,6 +15,13 @@ class AdminPartnerController extends AbstractController
         return $this->twig->render('Admin/Partner/index.html.twig', ['partners' => $partners]);
     }
 
+    public function update(int $id): string
+    {
+        $partnerManager = new PartnerManager();
+        $partner = $partnerManager->selectOneById($id);
+
+        return $this->twig->render('Admin/Partner/update.html.twig', ['partner' => $partner,]);
+    }
 
     public function create()
     {
