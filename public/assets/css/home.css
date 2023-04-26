@@ -65,7 +65,7 @@ article p:not(:first-of-type) {
     text-align: left;
 }
 
-img {
+.image {
     width: 100%;
 }
 
