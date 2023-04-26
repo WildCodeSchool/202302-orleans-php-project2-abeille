@@ -20,5 +20,6 @@ return [
     'admin/partenaire/ajouter' => ['AdminPartnerController', 'create',],
     'admin/faq/ajouter' => ['AdminFaqController', 'add',],
     'admin/faq/index' => ['AdminFaqController', 'index',],
+    'admin/event/index' => ['AdminEventController', 'index',],
     'admin/faq/supprimer' => ['AdminFaqController', 'delete', ['id']],
 ];
