@@ -3,6 +3,10 @@
 	{{parent()}}
 	| Faq | Ajout
 {% endblock %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/adminfaq.css">
+{% endblock %}
+{% block navbar %}{% endblock %}
 {% block content %}
 	<main class="container">
 		<h1>Ajouter FAQ</h1>
@@ -23,3 +27,4 @@
 		<a href="/admin/faq/index">Retour</a>
 	</main>
 {% endblock %}
+{% block footer %}{% endblock %}
