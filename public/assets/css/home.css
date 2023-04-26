@@ -50,6 +50,6 @@ article p:not(:first-of-type){
     text-align: left;
 }
 
-img{
+.event{
     width: 100%;
 }
