@@ -32,10 +32,6 @@ class AdminPartnerController extends AbstractController
                 $errors[] = 'Le champ logo doit faire moins de ' . $maxLength . ' caractères';
             }
 
-            if (!filter_var($partner, FILTER_VALIDATE_URL)) {
-                $errors[] = "L'URL est invalide";
-            }
-
             if (empty($partner['link'])) {
                 $errors[] = 'Le champ lien est obligatoire';
             }
@@ -45,11 +41,7 @@ class AdminPartnerController extends AbstractController
                 $errors[] = 'Le champ lien doit faire moins de ' . $maxLength . ' caractères';
             }
 
-            if (!filter_var($partner, FILTER_VALIDATE_URL)) {
-                $errors[] = "L'URL est invalide";
-            }
-
-            if (empty($errors)) {
+            if (!empty($errors)) {
                 $partnerManager = new PartnerManager();
                 $partnerManager->insert($partner);
                 header('Location: /admin/partenaire');
