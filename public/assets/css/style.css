@@ -62,7 +62,8 @@ nav ul {
     justify-content: center;
 }
 nav li{
-    padding :var(--nav-element-spacing-vertical) var(--nav-element-spacing-horizontal) /2;
+    --nav-element-spacing-horizontal: 0;
+    --nav-element-spacing-vertical: 0;
 }
 
 .burger-icon {
