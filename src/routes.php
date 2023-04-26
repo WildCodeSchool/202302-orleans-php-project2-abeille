@@ -19,4 +19,5 @@ return [
     'admin/partenaire' => ['AdminPartnerController', 'index',],
     'admin/faq/ajouter' => ['AdminFaqController', 'add',],
     'admin/faq/index' => ['AdminFaqController', 'index',],
+    'admin/event/index' => ['AdminEventController', 'index',],
 ];

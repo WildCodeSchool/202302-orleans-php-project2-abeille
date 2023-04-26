@@ -29,7 +29,7 @@
             <div class="grid">
             {% for event in events %}
                 <article class='container_fluid'>
-                    <img class="image" src="{{event.image ?? 'assets/images/placeholder.jpg'}}" alt='image event'>
+                    <img class="image" src="{{event.image ? "uploads/" ~ event.image : "assets/images/placeholder.jpg"}}" alt='image event'>
                     <p> {{date(event.date)|date("d/m/Y")}}</p>
                     <div class="card">
                         <h2> {{event.name}}</h2>
