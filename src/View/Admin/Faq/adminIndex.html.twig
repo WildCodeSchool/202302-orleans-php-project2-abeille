@@ -29,11 +29,14 @@
 							<li>{{ faq.answer }}</li>
 						</p>
 					</td>
-					<td></td>
+					<td>
+						<form action="/admin/faq/supprimer?id={{ faq.id }}" method="POST">
+							<button class="outline" name="id">Supprimer</button>
+						</form>
+					</td>
 				</tr>
 			{% endfor %}
 		</tbody>
 	</table>
-
 {% endblock %}
 {% block footer %}{% endblock %}
