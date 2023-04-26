@@ -11,14 +11,14 @@
 		<table>
 			<thead>
 				<tr>
-					<th>Logo</th>
+					<th>Nom</th>
 					<th>Lien</th>
 				</tr>
 			</thead>
 			<tbody>
 				{% for partner in partners %}
 					<tr>
-						<td>{{ partner.logo }}</td>
+						<td>{{ partner.name }}</td>
 						<td>{{ partner.link }}</td>
 					</tr>
 				{% endfor %}
