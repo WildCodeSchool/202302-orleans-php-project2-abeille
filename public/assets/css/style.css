@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
-
+@import 'home.css';
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
     --primary: #F7CD46;
@@ -12,8 +12,11 @@
 
 :root {
     --font-title: 'DynaPuff', cursive;
-    --font-text: 'roboto';
     color: var(--dark);
+}
+
+.container-fluid{
+    background-color: var(--body);
 }
 
 body h1 {
@@ -25,7 +28,6 @@ h1 {
 }
 
 p {
-    font-family: var(--font-text);
     color: var(--dark);
 }
 
@@ -74,7 +76,8 @@ nav li{
     display: none;
 }
 
-img {
+
+.image {
     width: 100%;
     object-fit: cover;
 }
@@ -99,4 +102,7 @@ img {
         padding : 0.5rem;
         margin: calc(var(--nav-link-spacing-vertical) * 0.5);
     }
+}
+.container {
+    padding-bottom: 0;
 }
