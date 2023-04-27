@@ -23,4 +23,5 @@ return [
     'admin/faq/index' => ['AdminFaqController', 'index',],
     'admin/event/index' => ['AdminEventController', 'index',],
     'admin/faq/supprimer' => ['AdminFaqController', 'delete', ['id']],
+    'admin/faq/modifier' => ['AdminFaqController', 'update', ['id']],
 ];
