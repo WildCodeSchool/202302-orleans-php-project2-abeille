@@ -15,7 +15,7 @@
     color: var(--dark);
 }
 
-.container-fluid {
+.container-fluid{
     background-color: var(--body);
 }
 
@@ -35,7 +35,8 @@ nav {
     background-color: var(--secondary);
     margin: 0;
     padding: 0.5rem;
-    height: 6rem;
+    min-height: 6rem;
+    width: 100%;
 }
 
 nav img {
@@ -58,11 +59,50 @@ nav > ul:not(:first-child) a:hover {
     color: var(--secondary);
 }
 
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+nav li{
+    --nav-element-spacing-horizontal: 0;
+    --nav-element-spacing-vertical: 0;
+}
+
+.burger-icon {
+    display: none;
+}
+
+.close{
+    display: none;
+}
+
+
 .image {
     width: 100%;
     object-fit: cover;
 }
 
+
+@media screen and (max-width: 760px) {
+   
+    .links{
+    display:none;
+    }
+
+    .burger-icon {
+        display:block;
+    }
+
+    .links:target{
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        padding : 0.5rem;
+        margin: calc(var(--nav-link-spacing-vertical) * 0.5);
+    }
+}
 .container {
     padding-bottom: 0;
 }
