@@ -88,4 +88,13 @@ class AdminPartnerController extends AbstractController
 
         return $this->twig->render('Admin/Partner/create.html.twig', ['errors' => $errors, 'partner' => $partner]);
     }
+
+    public function delete(int $id): void
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $partnerManager = new PartnerManager();
+            $partnerManager->delete($id);
+            header('Location: /admin/partenaire');
+        }
+    }
 }
