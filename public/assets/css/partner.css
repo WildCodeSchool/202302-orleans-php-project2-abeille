@@ -21,6 +21,16 @@
     display: flex;
 }
 
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem
+}
+
+.actions button, .actions form {
+    margin-block-end: 0;
+}
+
 h1 {
     color: var(--secondary);
 }

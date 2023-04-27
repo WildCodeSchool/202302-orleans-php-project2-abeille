@@ -7,7 +7,7 @@
 
 {% block content %}
 	<main class="container">
-	
+
 		<h1>Administration des partenaires</h1>
 		<a href="/admin/partenaire/ajouter" role="button">Ajouter un partenaire</a>
 		<table>
@@ -24,7 +24,12 @@
 						<td>{{ partner.name }}</td>
 						<td>{{ partner.link }}</td>
 						<td>
-							<a href="/admin/partenaire/modifier?id={{ partner.id }}">Modifier</a>
+							<div class="actions">
+								<a role="button" class="outline" href="/admin/partenaire/modifier?id={{ partner.id }}">Modifier</a>
+								<form action="/admin/partenaire/supprimer?id={{ partner.id }}" method="POST">
+									<button class="outline">Supprimer</button>
+								</form>
+							</div>
 						</td>
 					</tr>
 				{% endfor %}
@@ -32,4 +37,3 @@
 		</table>
 	</main>
 {% endblock %}
-
