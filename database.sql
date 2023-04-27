@@ -71,7 +71,7 @@ CREATE TABLE `partner` (
 
 
 INSERT INTO `partner` (`name`, `link`, `logo`) VALUES
-('Abeilles sentinelles', 'https://www.abeillesentinelle.net/', NULL), ('Apiculture, Univers du miel', NULL, 'public/assets/images/beefriend.webp'), ('La Santé Des Abeilles', 'https://www.anses.fr/fr/content/sant%C3%A9-des-abeilles', NULL);
+('Abeilles sentinelles', 'https://www.abeillesentinelle.net/', NULL), ('Apiculture, Univers du miel', 'public/assets/images/beefriend.webp', NULL), ('La Santé Des Abeilles', 'https://www.anses.fr/fr/content/sant%C3%A9-des-abeilles', NULL);
 
 CREATE TABLE `event` (
   `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
