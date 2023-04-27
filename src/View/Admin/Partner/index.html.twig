@@ -14,6 +14,7 @@
 				<tr>
 					<th>Nom</th>
 					<th>Lien</th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -21,6 +22,9 @@
 					<tr>
 						<td>{{ partner.name }}</td>
 						<td>{{ partner.link }}</td>
+						<td>
+							<a href="/admin/partenaire/modifier?id={{ partner.id }}">Modifier</a>
+						</td>
 					</tr>
 				{% endfor %}
 			</tbody>
