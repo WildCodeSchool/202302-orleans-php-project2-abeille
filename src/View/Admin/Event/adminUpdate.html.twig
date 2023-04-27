@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 {% block title %}
 	{{parent()}}
-	| event | ajout
+	| Event | Modifier
 {% endblock %}
 {% block stylesheet %}
 	<link rel="stylesheet" href="/assets/css/adminfaq.css">
@@ -9,13 +9,13 @@
 {% block navbar %}{% endblock %}
 {% block content %}
 	<main class="container">
-        <h1>Ajouter Évenements</h1>
-        <ul>
-            {% for error in errors %}
-                <li>{{ error }}</li>
-            {% endfor %}
-        </ul>
-        <form action="" method="post">
+		<h1>Modifier Évènements</h1>
+		<ul>
+			{% for error in errors %}
+				<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+		<form action="" method="post">
             <label for="name">Nom</label>
             <input type="text" name="name" id="name" value="{{ event.name }}" required></input>
 
@@ -28,9 +28,9 @@
             <label for="description">Description</label>
             <textarea type="text" name="description" id="description" required>{{ event.description }}</textarea>
 
-            <button>Ajouter</button>
+            <button>Modifier</button>
         </form>
-        <a href="/admin/event/index">Retour</a>
-    </main>
+		<a href="/admin/faq/index">Retour</a>
+	</main>
 {% endblock %}
 {% block footer %}{% endblock %}

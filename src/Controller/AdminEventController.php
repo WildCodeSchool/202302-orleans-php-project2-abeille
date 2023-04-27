@@ -64,4 +64,27 @@ class AdminEventController extends AbstractController
         }
         return $this->twig->render('Admin/Event/adminAdd.html.twig', ['errors' => $errors, 'event' => $event]);
     }
+
+    public function update(int $id): string
+    {
+        $eventManager = new EventManager();
+        $event = $eventManager->selectOneById($id);
+
+        $errors = [];
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $event = array_map('trim', $_POST);
+            $errors = $this->validate($event);
+
+            if (empty($errors)) {
+                $faqManager = new EventManager();
+                $event['id'] = $id;
+                $faqManager->update($event);
+
+                header('Location: /admin/event/index');
+            }
+        }
+
+        return $this->twig->render('Admin/Event/adminUpdate.html.twig', ['errors' => $errors, 'event' => $event,]);
+    }
 }
