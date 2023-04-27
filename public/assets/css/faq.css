@@ -12,3 +12,10 @@ h1 {
     margin: var(--faq-typography-spacing-vertical);
     text-align: center;
 }
+
+details {
+    margin: var(--spacing);
+}
+
+  
+
