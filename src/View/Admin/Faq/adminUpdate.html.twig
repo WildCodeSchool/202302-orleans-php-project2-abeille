@@ -1,0 +1,30 @@
+{% extends 'layout.html.twig' %}
+{% block title %}
+	{{parent()}}
+	| Faq | Modifier
+{% endblock %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/adminfaq.css">
+{% endblock %}
+{% block navbar %}{% endblock %}
+{% block content %}
+	<main class="container">
+		<h1>Modifier FAQ</h1>
+		<ul>
+			{% for error in errors %}
+				<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+		<form action="" method="post">
+			<label for="question">Question
+			</label>
+			<textarea  type="text" name="question" id="question" required>{{ faq.question }}</textarea>
+			<label for="answer">Réponse
+			</label>
+			<textarea  type="text" name="answer" id="answer" required>{{ faq.answer }}</textarea>
+			<button>Modifier</button>
+		</form>
+		<a href="/admin/faq/index">Retour</a>
+	</main>
+{% endblock %}
+{% block footer %}{% endblock %}
