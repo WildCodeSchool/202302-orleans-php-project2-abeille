@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 {% block title %}
 	{{parent()}}
-	Admin|Faq
+	Admin|Évènements
 {% endblock %}
 {% block stylesheet %}
 	<link rel="stylesheet" href="/assets/css/adminfaq.css">
@@ -10,6 +10,9 @@
 {% block content %}
 	<main class="container">
 		<h1>Administration Évènements</h1>
+		<button>
+			<a href="/admin/event/ajouter">Ajouter</a>
+		</button>
 		<table>
 			<thead>
 				<tr>
@@ -26,6 +29,9 @@
 						<td>{{ event.description }}</td>
 						<td>{{event.location}}</td>
 						<td>{{event.date}}</td>
+						<td>
+							<a href="/admin/event/modifier?id={{ event.id }}"><button class="outline">Modifier</button></a>
+						</td>
 					</tr>
 				{% endfor %}		
 			</tbody>

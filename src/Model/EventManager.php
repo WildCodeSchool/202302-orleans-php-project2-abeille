@@ -25,4 +25,21 @@ class EventManager extends AbstractManager
         $statement->execute();
         return (int)$this->pdo->lastInsertId();
     }
+
+    public function update(array $event): void
+    {
+        $statement = $this->pdo->prepare(
+            "UPDATE " . self::TABLE . " 
+            SET `name`= :name, `location`= :location, `date`= :date, description = :description
+            WHERE id=:id"
+        );
+
+        $statement->bindValue('name', $event['name'], PDO::PARAM_STR);
+        $statement->bindValue('location', $event['location'], PDO::PARAM_STR);
+        $statement->bindValue('date', $event['date'], PDO::PARAM_STR);
+        $statement->bindValue('description', $event['description'], PDO::PARAM_STR);
+        $statement->bindValue('id', $event['id'], PDO::PARAM_INT);
+
+        $statement->execute();
+    }
 }
