@@ -20,4 +20,5 @@ return [
     'admin/faq/ajouter' => ['AdminFaqController', 'add',],
     'admin/faq/index' => ['AdminFaqController', 'index',],
     'admin/faq/supprimer' => ['AdminFaqController', 'delete', ['id']],
+    'admin/faq/modifier' => ['AdminFaqController', 'update', ['id']],
 ];

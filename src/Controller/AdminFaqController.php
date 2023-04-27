@@ -55,4 +55,27 @@ class AdminFaqController extends AbstractController
             header('Location:/admin/faq/index');
         }
     }
+
+    public function update(int $id): string
+    {
+        $faqManager = new FaqManager();
+        $faq = $faqManager->selectOneById($id);
+
+        $errors = [];
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $faq = array_map('trim', $_POST);
+            $errors = $this->validate($faq);
+
+            if (empty($errors)) {
+                $faqManager = new FaqManager();
+                $faq['id'] = $id;
+                $faqManager->update($faq);
+
+                header('Location: /admin/faq/index');
+            }
+        }
+
+        return $this->twig->render('Admin/Faq/adminUpdate.html.twig', ['faq' => $faq,]);
+    }
 }
