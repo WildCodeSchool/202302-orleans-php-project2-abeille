@@ -6,12 +6,12 @@
 {% endblock %}
 
 {% block content %}
-
 	<main class="container">
-		<h1>Ajouter un partenaire</h1>
-		
+		<h1>Modifier le partenaire
+			{{ partner.name }}</h1>
+
 		{% include 'Admin/Partner/_form.html.twig' %}
+
 		<a href="/admin/partenaire">Retour</a>
 	</main>
 {% endblock %}
-
