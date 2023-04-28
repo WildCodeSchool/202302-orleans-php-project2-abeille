@@ -30,6 +30,9 @@
 						<td>{{event.location}}</td>
 						<td>{{event.date}}</td>
 						<td>
+							<form action="/admin/event/supprimer?id={{ event.id }}" method="POST">
+								<button class="outline" name="id">Supprimer</button>
+							</form>
 							<a href="/admin/event/modifier?id={{ event.id }}"><button class="outline">Modifier</button></a>
 						</td>
 					</tr>

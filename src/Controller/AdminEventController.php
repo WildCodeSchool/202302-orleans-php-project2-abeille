@@ -87,4 +87,13 @@ class AdminEventController extends AbstractController
 
         return $this->twig->render('Admin/Event/adminUpdate.html.twig', ['errors' => $errors, 'event' => $event,]);
     }
+
+    public function delete(int $id): void
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $eventManager = new eventManager();
+            $eventManager->delete((int)$id);
+            header('Location:/admin/event/index');
+        }
+    }
 }
