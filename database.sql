@@ -80,9 +80,9 @@ CREATE TABLE `event` (
   `location` VARCHAR(150),
   `date` DATE NOT NULL);
 
-INSERT INTO event (name,description,location,date) VALUES('Visite de nos ruches','Nous allons visiter nos ruches et expliquer au différents visteur comme cela fonctionne.','Olivet Domaine de l‘Abeille Olivétaine.','2023-05-22');
+INSERT INTO event (name,description,location,date) VALUES('Visite de nos ruches','Nous allons visiter nos ruches et en expliquer le fonctionnement aux visteurs.','Olivet Domaine de l‘Abeille Olivétaine.','2023-05-22');
 
-INSERT INTO event (name,description,location,date) VALUES('Création de Ruches','Nous Allons créé des Ruches dans notre nouveau domaines','Olivet Domaine Jean Pernaud','2023-07-10');
+INSERT INTO event (name,description,location,date) VALUES('Création de Ruches','Nous allons créer des Ruches sur notre nouveau domaine','Olivet Domaine Jean Pernaud','2023-07-10');
 
 INSERT INTO event (name,description,location,date) VALUES('Découverte des abeilles','Nous allons faire découvrir les abeilles à nos visiteurs','Olivet Domaine de l’Abeille Olivetaine','2023-05-10');
 
