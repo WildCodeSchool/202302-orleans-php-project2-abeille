@@ -7,7 +7,6 @@
     --light: #fff5d0;
     --body: #FFFAE8;
     --dark: #230a04;
-    --dark: #230a04;
 }
 
 :root {
@@ -17,10 +16,6 @@
 
 .container-fluid{
     background-color: var(--body);
-}
-
-body h1 {
-    color: var(--dark);
 }
 
 h1 {
