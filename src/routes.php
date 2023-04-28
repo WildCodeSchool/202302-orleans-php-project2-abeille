@@ -27,4 +27,5 @@ return [
     'admin/event/ajouter' => ['AdminEventController', 'add'],
     'admin/faq/modifier' => ['AdminFaqController', 'update', ['id']],
     'admin/event/modifier' => ['AdminEventController', 'update', ['id']],
+    'admin/event/supprimer' => ['AdminEventController', 'delete', ['id']],
 ];
