@@ -79,9 +79,28 @@ class AdminPartnerController extends AbstractController
 
             $errors = $this->validate($partner);
 
+            if ($_FILES['image']['error'] !== 0) {
+                $errors[] = 'Problème avec l\'upload, veuillez rééssayer';
+            } else {
+                $limitFileSize = 1000000;
+                if ($_FILES['image']['size'] > $limitFileSize) {
+                    $errors[] = 'Le fichier doit faire moins de ' . $limitFileSize / 1000000 . 'MO';
+                }
+
+                $authorizedMimes = ['logo/jpeg', 'logo/png', 'logo/jpg', 'logo/webp'];
+                if (in_array(mime_content_type($_FILES['image']['tmp_name']), $authorizedMimes)) {
+                    $errors[] = 'Le type de fichier est incorrect. Types autorisés: ' . implode(', ', $authorizedMimes);
+                }
+            }
+
             if (empty($errors)) {
+                $extension = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+                $baseFileName = pathinfo($_FILES['image']['name'], PATHINFO_FILENAME);
+                $imageName = uniqid($baseFileName, more_entropy: true) . '.' . $extension;
+                $partner['logo'] = $imageName;
                 $partnerManager = new PartnerManager();
                 $partnerManager->insert($partner);
+                move_uploaded_file($_FILES['image']['tmp_name'], __DIR__ . '/../../public/uploads/' . $imageName);
                 header('Location: /admin/partenaire');
             }
         }

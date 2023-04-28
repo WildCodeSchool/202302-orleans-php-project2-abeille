@@ -5,7 +5,7 @@
 				</li>
 			{% endfor %}
 		</ul>
-		<form action="" method="POST">
+		<form action="" method="POST" enctype="multipart/form-data">
 
 			<label for="nom">Nom du site</label>
 			<input type="text" id="name" name="name" required value=" {{ partner.name }}">
@@ -13,5 +13,6 @@
 			<label for="lien">URL du site</label>
 			<input type="text" id="link" name="link" required value=" {{ partner.link }}">
 
+			<input type="file" name="image">
 			<button>Valider</button>
 		</form>

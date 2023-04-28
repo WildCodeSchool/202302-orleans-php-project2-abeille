@@ -11,9 +11,12 @@ class PartnerManager extends AbstractManager
 
     public function insert(array $partner): void
     {
-        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`name`, `link`) VALUES (:name, :link)");
+        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`name`, `link`, `logo`)
+        VALUES (:name, :link, :logo)");
         $statement->bindValue('name', $partner['name'], PDO::PARAM_STR);
         $statement->bindValue('link', $partner['link'], PDO::PARAM_STR);
+        $statement->bindValue('logo', $partner['logo'], PDO::PARAM_STR);
+
 
         $statement->execute();
     }
