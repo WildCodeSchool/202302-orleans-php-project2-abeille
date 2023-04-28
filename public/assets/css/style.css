@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
-
+@import 'home.css';
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
     --primary: #F7CD46;
     --secondary: #522b14;
     --light: #fff5d0;
+    --body: #FFFAE8;
+    --dark: #230a04;
     --dark: #230a04;
 }
 
 :root {
     --font-title: 'DynaPuff', cursive;
-    --font-text: 'roboto';
     color: var(--dark);
+}
+
+.container-fluid{
+    background-color: var(--body);
 }
 
 body h1 {
@@ -23,7 +28,6 @@ h1 {
 }
 
 p {
-    font-family: var(--font-text);
     color: var(--dark);
 }
 
@@ -31,9 +35,9 @@ nav {
     background-color: var(--secondary);
     margin: 0;
     padding: 0.5rem;
-    height: 6rem;
+    min-height: 6rem;
+    width: 100%;
 }
-
 
 nav img {
     width: 4rem;
@@ -50,15 +54,55 @@ nav :where(a, [role="link"]) {
     margin: calc(var(--nav-link-spacing-vertical) * -1) calc(var(--nav-link-spacing-horizontal) * +0.5);
 }
 
-
-
 nav > ul:not(:first-child) a:hover {
     background-color: var(--primary);
     color: var(--secondary);
 }
 
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+nav li{
+    --nav-element-spacing-horizontal: 0;
+    --nav-element-spacing-vertical: 0;
+}
 
-img {
+.burger-icon {
+    display: none;
+}
+
+.close{
+    display: none;
+}
+
+
+.image {
     width: 100%;
     object-fit: cover;
+}
+
+
+@media screen and (max-width: 760px) {
+   
+    .links{
+    display:none;
+    }
+
+    .burger-icon {
+        display:block;
+    }
+
+    .links:target{
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        padding : 0.5rem;
+        margin: calc(var(--nav-link-spacing-vertical) * 0.5);
+    }
+}
+.container {
+    padding-bottom: 0;
 }

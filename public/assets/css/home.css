@@ -1,0 +1,74 @@
+@import url(partner.css);
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--secondary);
+    font-family: var(--fonttitle)
+}
+
+ul li {
+    color: var(--secondary);
+    list-style: none;
+}
+
+section h2:last-of-type {
+    --typography-spacing-vertical: 4.5rem;
+    margin-top: var(--typography-spacing-vertical);
+    margin-bottom: 2.5rem;
+}
+
+h2,
+h3 {
+    --font-size: 1.5rem;
+    font-size: var(--font-size);
+}
+
+section h2:last-of-type {
+    margin-top: 0;
+}
+
+.grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem; 
+}
+
+article {
+    padding: 0;
+    --border-radius: 0.50rem;
+    border-radius: var(--border-radius);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+article img {
+    object-fit: cover;
+    --border-radius: 0.50rem 0.50rem 0rem 0rem;
+    border-radius: var(--border-radius);
+
+}
+
+.date {
+    color: grey;
+    align-self: center;
+    
+}
+.card {
+    display:flex;
+    flex-direction: column;
+    --spacing: 0.10rem;
+    padding: var(--block-spacing-horizontal);
+}
+
+article p:not(:first-of-type) {
+    text-align: left;
+}
+
+.image {
+    width: 100%;
+}
+
+main section {
+    padding: 1.5rem;
+}
