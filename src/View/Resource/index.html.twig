@@ -9,10 +9,11 @@
 {% block content %}
 	<h1>FAQ</h1>
 	{% for faq in faqs %}
-		<p>Question:<li>{{ faq.question }}</li>
-		</p>
-		<p>Réponse:
-			<li>{{ faq.answer}}</li>
-		</p>
+		<main class="container">
+			<details>
+				<summary>{{ faq.question }}</summary>
+				<p>{{ faq.answer }}</p>
+			</details>
+		</main>
 	{% endfor %}
 {% endblock %}
