@@ -1,0 +1,17 @@
+{% block stylesheet %}
+	<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" href="/assets/css/partner.css">
+
+{% endblock %}
+
+{% block content %}
+
+	<main class="container">
+		<h1>Ajouter un partenaire</h1>
+		
+		{% include 'Admin/Partner/_form.html.twig' %}
+		<a href="/admin/partenaire">Retour</a>
+	</main>
+{% endblock %}
+

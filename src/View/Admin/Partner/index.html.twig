@@ -1,17 +1,21 @@
 {% block stylesheet %}
 	<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
-	<link rel="stylesheet" href="/assets/css/admin.partner.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" href="/assets/css/partner.css">
 
 {% endblock %}
 
 {% block content %}
 	<main class="container">
-    <h1>Administration des partenaires</h1>
+
+		<h1>Administration des partenaires</h1>
+		<a href="/admin/partenaire/ajouter" role="button">Ajouter un partenaire</a>
 		<table>
 			<thead>
 				<tr>
 					<th>Nom</th>
 					<th>Lien</th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -19,6 +23,14 @@
 					<tr>
 						<td>{{ partner.name }}</td>
 						<td>{{ partner.link }}</td>
+						<td>
+							<div class="actions">
+								<a role="button" href="/admin/partenaire/modifier?id={{ partner.id }}">Modifier</a>
+								<form action="/admin/partenaire/supprimer?id={{ partner.id }}" method="POST">
+									<button>Supprimer</button>
+								</form>
+							</div>
+						</td>
 					</tr>
 				{% endfor %}
 			</tbody>

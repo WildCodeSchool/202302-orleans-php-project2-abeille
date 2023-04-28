@@ -1,26 +1,31 @@
 <!doctype html>
 <html lang="fr" data-theme="light">
-<head>
-    
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/assets/images/favicon.png">
-    
+	<head>
 
-    <title>{% block title %}L'Abeille Olivetaine{% endblock %}</title>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="/assets/images/favicon.png">
+
+	{% block navbar %}{% include "Item/_navbar.html.twig" %}{% endblock %}
+
+		<title>
+			{% block title %}L'Abeille Olivetaine
+			{% endblock %}
+		</title>
 
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/fix.footer.css">
     {% block stylesheet %}{% endblock %}
 </head>
+		<body class="container-fluid">
+	
+			{% block content %}{% endblock %}
+			{% block javascript %}{% endblock %}
 
-<body class="container-fluid">
-    {% block content %}{% endblock %}
-    {% block javascript %}{% endblock %}
-    {% block footer %}{% include "Home/_footer.html.twig" %}{% endblock %}
-</body>
-</html>
-
-
+    {% block footer %}{% include "Home/_fix.footer.html.twig" %}{% endblock %}
+	
+		</body>
+	</html>
+</body></html>

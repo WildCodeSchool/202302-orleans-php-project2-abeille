@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+{% block title %}
+	{{parent()}}
+	| Ressource
+{% endblock %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="assets/css/faq.css">
+{% endblock %}
+{% block content %}
+	<h1>FAQ</h1>
+	{% for faq in faqs %}
+		<main class="container">
+			<details>
+				<summary>{{ faq.question }}</summary>
+				<p>{{ faq.answer }}</p>
+			</details>
+		</main>
+	{% endfor %}
+{% endblock %}

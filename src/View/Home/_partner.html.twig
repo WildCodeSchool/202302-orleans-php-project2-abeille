@@ -1,0 +1,11 @@
+<section class="partner-section">
+	<div class="partners">
+		{% for partner in partners %}
+			<div class="partner-circle">
+			<a href="{{partner.link}}" target="_blank">
+			<img alt="" src="{{ partner.logo ? '/uploads/' ~ partner.logo : '/assets/images/placehold.png'}}" width="70" height="70">
+			</a>
+			</div>
+		{% endfor %}
+	</div>
+</section>

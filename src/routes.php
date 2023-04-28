@@ -6,6 +6,7 @@
 //          2. method name
 //          3. (optional) array of query string keys to send as parameter to the method
 // e.g route '/item/edit?id=1' will execute $itemController->edit(1)
+
 return [
     '' => ['HomeController', 'index',],
     'items' => ['ItemController', 'index',],
@@ -13,6 +14,18 @@ return [
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
+    'partner' => ['PartnerController', 'index'],
     'resource' => ['ResourceController', 'index',],
     'admin/partenaire' => ['AdminPartnerController', 'index',],
+    'admin/partenaire/ajouter' => ['AdminPartnerController', 'create',],
+    'admin/partenaire/modifier' => ['AdminPartnerController', 'update',['id'] ],
+    'admin/partenaire/supprimer' => ['AdminPartnerController', 'delete',['id'] ],
+    'admin/faq/ajouter' => ['AdminFaqController', 'add',],
+    'admin/faq/index' => ['AdminFaqController', 'index',],
+    'admin/event/index' => ['AdminEventController', 'index',],
+    'admin/faq/supprimer' => ['AdminFaqController', 'delete', ['id']],
+    'admin/event/ajouter' => ['AdminEventController', 'add'],
+    'admin/faq/modifier' => ['AdminFaqController', 'update', ['id']],
+    'admin/event/modifier' => ['AdminEventController', 'update', ['id']],
+    'admin/event/supprimer' => ['AdminEventController', 'delete', ['id']],
 ];

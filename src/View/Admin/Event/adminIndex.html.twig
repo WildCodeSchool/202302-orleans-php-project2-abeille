@@ -1,0 +1,45 @@
+{% extends 'layout.html.twig' %}
+{% block title %}
+	{{parent()}}
+	Admin|Évènements
+{% endblock %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/adminfaq.css">
+{% endblock %}
+{% block navbar %}{% endblock %}
+{% block content %}
+	<main class="container">
+		<h1>Administration Évènements</h1>
+		<button>
+			<a href="/admin/event/ajouter">Ajouter</a>
+		</button>
+		<table>
+			<thead>
+				<tr>
+					<th>Nom</th>
+					<th>Description</th>
+					<th>Location</th>
+					<th>Date</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for event in events %}
+					<tr>
+						<td>{{ event.name }}</td>
+						<td>{{ event.description }}</td>
+						<td>{{event.location}}</td>
+						<td>{{event.date}}</td>
+						<td>
+							<form action="/admin/event/supprimer?id={{ event.id }}" method="POST">
+								<button class="outline" name="id">Supprimer</button>
+							</form>
+							<a href="/admin/event/modifier?id={{ event.id }}"><button class="outline">Modifier</button></a>
+						</td>
+					</tr>
+				{% endfor %}		
+			</tbody>
+		</table>
+	</main>
+
+{% endblock %}
+{% block footer %}{% endblock %}

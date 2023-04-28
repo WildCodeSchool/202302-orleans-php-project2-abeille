@@ -1,3 +1,4 @@
+
 body>footer {
     padding: 0;
 }
@@ -15,6 +16,7 @@ body>footer {
     justify-content: center;
     align-items: center;
     width: 100vw;
+    height: 6rem;
 }
 
 button {
@@ -23,6 +25,11 @@ button {
     background-color: var(--primary);
     color: var(--secondary);
     margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+button:hover {
+    background-color: var(--light);
 }
 
 .button-contact,
@@ -41,10 +48,11 @@ button {
 }
 
 .copyright {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     color: var(--light);
     align-self: flex-end;
     margin-bottom: 0.5rem;
+    color: var(--primary);
 }
 
 
@@ -72,19 +80,27 @@ img {
         color: var(--primary);
     }
 
-
     .button-contact,
     .button-faq {
+        background-color: var(--primary);
+        color: var(--secondary);
         margin-bottom: 0.3rem;
         margin-top: 0.3rem;
+        margin-right: 0.4rem;
+        margin-left: 0.4rem;
         font-size: 0.7rem;
-        margin-right: 0.5rem;
-        margin-left: 0.5rem;
     }
 
     svg {
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
     }
-}
 
+    .copyright {
+        justify-content: center;
+        color: var(--primary);
+        font-size: 0.5rem;
+        margin-left: 0.4rem;
+    }
+
+}
