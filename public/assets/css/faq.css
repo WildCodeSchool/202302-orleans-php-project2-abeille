@@ -13,8 +13,12 @@ h1 {
     text-align: center;
 }
 
-details {
-    margin: var(--spacing);
+details>p {
+    background: var(--light);
+    border: solid 1px black;
+    margin-block-end: 0;
+    padding: var(--spacing);
+    border-radius: 5px;;
 }
 
   
