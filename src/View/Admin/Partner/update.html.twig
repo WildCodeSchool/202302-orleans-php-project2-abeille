@@ -4,7 +4,7 @@
 	<link rel="stylesheet" href="/assets/css/partner.css">
 
 {% endblock %}
-
+{% block navbar %}{% endblock %}
 {% block content %}
 	<main class="container">
 		<h1>Modifier le partenaire
@@ -15,3 +15,4 @@
 		<a href="/admin/partenaire">Retour</a>
 	</main>
 {% endblock %}
+{% block footer %}{% extends '_fix.footer.html.twig'%}{% endblock %}
