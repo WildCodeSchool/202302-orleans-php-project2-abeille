@@ -14,6 +14,7 @@ return [
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
+    'association' => ['AssociationController', 'index'],
     'partner' => ['PartnerController', 'index'],
     'resource' => ['ResourceController', 'index',],
     'admin/partenaire' => ['AdminPartnerController', 'index',],
