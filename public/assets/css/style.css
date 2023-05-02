@@ -35,18 +35,19 @@ nav {
     background-color: var(--secondary);
     margin: 0;
     padding: 0.5rem;
-    min-height: 6rem;
+    min-height: 10rem;
     width: 100%;
 }
 
 nav img {
-    width: 4rem;
+    width: 6rem;
 }
 
 nav a {
     background-color: var(--secondary);
     color: var(--light);
     padding: 1rem;
+    font-size: clamp(var(--font-size), 2vw, (var(--font-size) * 2));
 }
 
 nav :where(a, [role="link"]) {
