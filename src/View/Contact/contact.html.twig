@@ -1,0 +1,32 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/style.css">
+{% endblock %}
+{% block content %}
+	<main class="container">
+		<section class="contact" id="contact-section">
+			<h1 class="title-contact">Contact</h1>
+			<div class="content-form">
+				<div class="form">
+					<form action="" id="formulaire" method="POST">
+						<input type="text" id="first-name" name="user_firstname" placeholder="Prénom" required>
+						<input type="text" id="last-name" name="user_lastname" placeholder="Nom" required>
+						<input type="email" id="email" name="user_email" placeholder="Email" required>
+						<input type="number" id="number" name="user_number" placeholder="Numéro" required>
+						<label for="user_origin">Veuillez séléctionner le sujet de votre demande</label>
+						<select name="user_origin" id="user_origin">
+							<option value="terrien">Recrutement</option>
+							<option value="wookies">Les abeilles</option>
+							<option value="martien">L'apiculture</option>
+							<option value="robot">Autres...</option>
+						</select>
+						<textarea id="message" name="user_message" placeholder="Message..." cols="30" rows="10" required></textarea>
+						<button type="submit">Envoyer</button>
+					</form>
+				</div>
+                </section>
+			</main>
+            
+		{% endblock %}
+
+        
