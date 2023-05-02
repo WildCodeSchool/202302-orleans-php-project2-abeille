@@ -1,5 +1,13 @@
+button {
+    width: 5rem;
+    height: 2rem;
+    font-size: 0.7rem;
+    padding: 0;
+}
+
 button a {
     color: var(--dark);
+    
 }
 
 li {
