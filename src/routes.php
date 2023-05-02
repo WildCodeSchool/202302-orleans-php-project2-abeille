@@ -22,7 +22,7 @@ return [
     'admin/partenaire/modifier' => ['AdminPartnerController', 'update',['id'] ],
     'admin/partenaire/supprimer' => ['AdminPartnerController', 'delete',['id'] ],
     'admin/faq/ajouter' => ['AdminFaqController', 'add',],
-    'admin/faq/index' => ['AdminFaqController', 'index',],
+    'admin/faq' => ['AdminFaqController', 'index',],
     'admin/event/index' => ['AdminEventController', 'index',],
     'admin/faq/supprimer' => ['AdminFaqController', 'delete', ['id']],
     'admin/event/ajouter' => ['AdminEventController', 'add'],
