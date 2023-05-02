@@ -8,6 +8,7 @@
     --body: #FFFAE8;
     --dark: #230a04;
     --dark: #230a04;
+    --primary-hover: none;
 }
 
 :root {
@@ -80,6 +81,28 @@ nav li{
 .image {
     width: 100%;
     object-fit: cover;
+}
+
+.adminTitle {
+    border-bottom: 3px solid var(--primary);
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.adminIndex {
+    background: none;
+    height: 6rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.adminIndex:hover {
+    background-color: var(--primary);
+}
+
+.element {
+    font-size: 1.5rem;
 }
 
 
