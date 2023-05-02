@@ -1,10 +1,4 @@
-.history img {
-    width: clamp(10rem, 100%, 25rem);
-    height: auto;
-    float: left;
-    margin: var(--spacing) ;
-}
-
+.history img,
 .honey img {
     width: clamp(10rem, 100%, 25rem);
     height: auto;
