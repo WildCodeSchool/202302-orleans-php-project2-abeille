@@ -9,8 +9,8 @@ class AssociationController extends AbstractController
     public function index(): string
     {
         $associationManager = new AssociationManager();
-        $associations = $associationManager->selectAll('title');
+        $events = $associationManager->getEvents();
 
-        return $this->twig->render('Association/association.html.twig', ['associations' => $associations]);
+        return $this->twig->render('Association/association.html.twig', ['events' => $events]);
     }
 }

@@ -1,0 +1,70 @@
+@import url(home.css);
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/images/honeycomb_resize.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 59vh;
+}
+
+.header>h1{
+    font-size: clamp(var(--font-size), 3vw, (var(--font-size) * 2));
+    background-color: var(--transparent-body);
+    width: fit-content;
+    border-radius: 8px;
+    padding-inline: 2rem;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--secondary);
+    font-family: var(--fonttitle);
+}
+
+h2,
+h3 {
+    --font-size: 1.5rem;
+    font-size: var(--font-size);
+}
+
+.grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
+    gap: 2rem; 
+    margin: var(--block-spacing-horizontal);
+}
+
+article {
+    padding: 0;
+    --border-radius: 0.50rem;
+    border-radius: var(--border-radius);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+article img {
+    object-fit: cover;
+    --border-radius: 0.50rem 0.50rem 0rem 0rem;
+    border-radius: var(--border-radius);
+
+}
+
+p {
+    padding: var(--block-spacing-horizontal) / 2;
+}
+
+.date {
+    color: grey;
+    align-self: center;
+    
+}
+.card {
+    display:flex;
+    flex-direction: column;
+    --spacing: 0.10rem;
+    padding: 0,2rem;
+}

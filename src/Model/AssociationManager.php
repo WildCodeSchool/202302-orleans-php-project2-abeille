@@ -7,9 +7,9 @@ use PDO;
 class AssociationManager extends AbstractManager
 {
     public const TABLE = 'event';
-    public function getEvent()
+    public function getEvents()
     {
-        $query = 'SELECT * FROM ' . static::TABLE . ' WHERE date>NOW() ORDER BY date ASC ';
+        $query = 'SELECT * FROM ' . static::TABLE . ' ORDER BY date ASC ';
         return $this->pdo->query($query)->fetchAll();
     }
 }
