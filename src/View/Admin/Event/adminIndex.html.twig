@@ -4,15 +4,13 @@
 	Admin|Évènements
 {% endblock %}
 {% block stylesheet %}
-	<link rel="stylesheet" href="/assets/css/adminfaq.css">
+	<link rel="stylesheet" href="/assets/css/admin.css">
 {% endblock %}
 {% block navbar %}{% endblock %}
 {% block content %}
 	<main class="container">
 		<h1>Administration Évènements</h1>
-		<button>
-			<a href="/admin/event/ajouter">Ajouter</a>
-		</button>
+		<a role="button" href="/admin/faq/ajouter">Ajouter</a>
 		<table>
 			<thead>
 				<tr>
@@ -33,10 +31,10 @@
 							<form action="/admin/event/supprimer?id={{ event.id }}" method="POST">
 								<button class="outline" name="id">Supprimer</button>
 							</form>
-							<a href="/admin/event/modifier?id={{ event.id }}"><button class="outline">Modifier</button></a>
+							<a role="button" href="/admin/event/modifier?id={{ event.id }}" >Modifier</a>
 						</td>
 					</tr>
-				{% endfor %}		
+				{% endfor %}
 			</tbody>
 		</table>
 	</main>
