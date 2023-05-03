@@ -6,6 +6,13 @@
 	<main class="container">
 		<section class="contact" id="contact-section">
 			<h1 class="title-contact">Contact</h1>
+			<ul class="errors">
+				{% for error in errors %}
+					<li>
+						{{ error }}
+					</li>
+				{% endfor %}
+			</ul>
 			<div class="content-form">
 				<div class="form">
 					<form action="" id="formulaire" method="POST">
@@ -24,9 +31,7 @@
 						<button type="submit">Envoyer</button>
 					</form>
 				</div>
-                </section>
-			</main>
-            
-		{% endblock %}
+			</section>
+		</main>
 
-        
+	{% endblock %}
