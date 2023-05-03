@@ -16,6 +16,7 @@ return [
     'items/delete' => ['ItemController', 'delete',],
     'association' => ['AssociationController', 'index'],
     'partner' => ['PartnerController', 'index'],
+    'apiculture' => ['BeekeepingController', 'index',],
     'resource' => ['ResourceController', 'index',],
     'admin/partenaire' => ['AdminPartnerController', 'index',],
     'admin/partenaire/ajouter' => ['AdminPartnerController', 'create',],
