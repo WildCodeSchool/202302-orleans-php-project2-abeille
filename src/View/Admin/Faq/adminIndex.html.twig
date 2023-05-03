@@ -1,0 +1,43 @@
+{% extends 'layout.html.twig' %}
+{% block title %}
+	{{parent()}}
+	Admin|Faq
+{% endblock %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/adminfaq.css">
+{% endblock %}
+{% block navbar %}{% endblock %}
+{% block content %}
+	<h1>FAQ</h1>
+	<button>
+		<a href="/admin/faq/ajouter">{{ buttonName|default('Ajouter') }}</a>
+	</button>
+	<table>
+		<thead>
+			<tr>
+				<th>Liste des FAQ</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for faq in faqs %}
+				<tr>
+					<td>
+						<p>Question
+							<li>{{ faq.question }}</li>
+						</p>
+						<p>Réponse
+							<li>{{ faq.answer }}</li>
+						</p>
+					</td>
+					<td>
+						<form action="/admin/faq/supprimer?id={{ faq.id }}" method="POST">
+							<button class="outline" name="id">Supprimer</button>
+						</form>
+						<a href="/admin/faq/modifier?id={{ faq.id }}"><button class="outline">Modifier</button></a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}
+{% block footer %}{% endblock %}
