@@ -88,6 +88,28 @@ nav li{
     object-fit: cover;
 }
 
+.adminTitle {
+    border-bottom: 3px solid var(--primary);
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.adminIndex {
+    height: 6rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.adminIndex:hover {
+    background-color: var(--primary);
+}
+
+.element {
+    font-size: 1.5rem;
+}
+
 header {
     background-image: url("/assets/images/abeilles.jpeg");
     background-size: cover;
