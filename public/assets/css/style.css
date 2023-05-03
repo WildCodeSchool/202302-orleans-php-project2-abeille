@@ -73,10 +73,10 @@ nav li{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/assets/images/honeycomb_resize.jpg");
+    background-image: url("/assets/images/honeycomb_asso.jpg");
     background-size: cover;
     background-attachment: fixed;
-    height: 59vh;
+    height: 50vh;
 }
 
 .header>h1{
