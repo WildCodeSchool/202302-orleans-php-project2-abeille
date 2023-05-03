@@ -19,7 +19,11 @@ button {
 a {
     width: 5rem;
     height: 2rem;
-    margin: 2rem 5rem ;
+    margin: 1rem 5rem ;
+}
+
+button.outline {
+    margin: 1rem 5rem ;
 }
 
 button.outline:hover{

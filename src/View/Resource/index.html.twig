@@ -7,13 +7,13 @@
 	<link rel="stylesheet" href="assets/css/faq.css">
 {% endblock %}
 {% block content %}
-	<h1>FAQ</h1>
-	{% for faq in faqs %}
-		<main class="container">
+	<main class="container">
+		<h1>FAQ</h1>
+		{% for faq in faqs %}
 			<details>
 				<summary>{{ faq.question }}</summary>
 				<p>{{ faq.answer }}</p>
 			</details>
-		</main>
-	{% endfor %}
+		{% endfor %}
+	</main>
 {% endblock %}
