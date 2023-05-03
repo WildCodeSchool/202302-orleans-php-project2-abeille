@@ -88,16 +88,15 @@ nav li{
     object-fit: cover;
 }
 
-.header {
+header {
     background-image: url("/assets/images/abeilles.jpeg");
     background-size: cover;
     background-attachment: fixed;
-    height: 89vh;
+    height: 80vh;
 }
 
 .headerTitle {
     font-size: 6rem;
-    padding-top: 3rem;
 }
 
 .citation {
