@@ -80,11 +80,23 @@ CREATE TABLE `event` (
   `location` VARCHAR(150),
   `date` DATE NOT NULL);
 
-INSERT INTO event (name,description,location,date) VALUES('Visite de nos ruches','Nous organisons la visite nos ruches aux visiteurs afin qu\'ils en comprennent le fonctionnement.','Domaine de l‘Abeille Olivetaine, Olivet.','2023-05-22');
 
-INSERT INTO event (name,description,location,date) VALUES('Création de Ruches','Création de Ruches sur notre nouveau domaine','Domaine Jean Pernaud, Olivet','2023-07-10');
+INSERT INTO event (name,description,location,date) VALUES('Visite de nos ruches','Nous allons visiter nos ruches et en expliquer le fonctionnement aux visteurs.','Olivet Domaine de l‘Abeille Olivétaine.','2023-05-22');
+
+INSERT INTO event (name,description,location,date) VALUES('Création de Ruches','Nous allons créer des Ruches sur notre nouveau domaine','Olivet Domaine Jean Pernaud','2023-07-10');
 
 INSERT INTO event (name,description,location,date) VALUES('Découverte des abeilles','Nous allons faire découvrir les abeilles à nos visiteurs','Domaine de l’Abeille Olivetaine, Olivet','2023-05-10');
+
+INSERT INTO event (name,description,location,date) VALUES('Journée découverte','Journée régionale de la recherche apicole au lycée agricole de Chartres. L\'évènement se tiendra de 14h à 17h30 en présence des classes de bac pro apiculture. Venez nombreux !','Lycée agricole de Chartres','2019-04-06');
+
+INSERT INTO event (name,description,location,date) VALUES('Découverte des abeilles','Stand de l\'Abeille Olivetaine au salon des arts du jardin au parc floral d\'Orléans la source' ,'Parc floral d\'Orléans la Source','2019-04-06');
+
+INSERT INTO event (name,description,location,date) VALUES('Assemblée générale de L\'abeille olivetaine','Assemblée ordinaire, à partir de 19h30','Olivet, Salle Champillou','2019-02-08');
+
+INSERT INTO event (name,description,location,date) VALUES('Ateliers découverte des abeilles','Animations pour groupes scolaires','Parc floral d\'Orléans la Source','2015-04-01');
+
+INSERT INTO event (name,description,location,date) VALUES('Assemblée générale de L\'abeille olivetaine','Assemblée générale de L\'abeille olivetaine à 20 H 30 (ouverture des portes dès 20 H), fin à 22 H 50 au plus tard.','Centre culturel d\'Yvremont, Olivet.','2015-02-06'); 
+
 
 CREATE TABLE `faq` (
   `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
