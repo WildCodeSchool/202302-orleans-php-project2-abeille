@@ -9,8 +9,23 @@
 
 	<main class="container">
 		<h1>Ajouter un partenaire</h1>
-		
-		{% include 'Admin/Partner/_form.html.twig' %}
+		<ul class="errors">
+			{% for error in errors %}
+				<li>
+					{{ error }}
+				</li>
+			{% endfor %}
+		</ul>
+		<form action="" method="POST">
+
+			<label for="nom">Nom du site</label>
+			<input type="text" id="name" name="name" required value=" {{ partner.name }}">
+
+			<label for="lien">URL du site</label>
+			<input type="text" id="link" name="link" required value=" {{ partner.link }}">
+
+			<button>Ajouter</button>
+		</form>
 		<a href="/admin/partenaire">Retour</a>
 	</main>
 {% endblock %}
