@@ -108,4 +108,12 @@ INSERT INTO `faq` (`question`, `answer`) VALUES
 ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac erat dui. In placerat orci. ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt.'),
 ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet arcu id eros suscipit ornare et eget urna. Vivamus. ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel odio id elit tempor semper.');
 
+CREATE TABLE `picture` (
+  `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  `name` VARCHAR(255) NOT NULL,
+  `date` DATE NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+INSERT INTO `picture` (`name`, `date`) VALUES
+('abeille1.jpg','2020-03-10'),
+('apiculture.jpg','2021-04-15');

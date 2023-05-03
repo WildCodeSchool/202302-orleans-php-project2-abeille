@@ -30,4 +30,5 @@ return [
     'admin/faq/modifier' => ['AdminFaqController', 'update', ['id']],
     'admin/event/modifier' => ['AdminEventController', 'update', ['id']],
     'admin/event/supprimer' => ['AdminEventController', 'delete', ['id']],
+    'admin/image' => ['AdminPictureController', 'index'],
 ];
