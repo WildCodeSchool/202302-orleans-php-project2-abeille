@@ -17,7 +17,7 @@ return [
     'association' => ['AssociationController', 'index'],
     'partner' => ['PartnerController', 'index'],
     'apiculture' => ['BeekeepingController', 'index',],
-    'resource' => ['ResourceController', 'index',],
+    'ressource' => ['ResourceController', 'index',],
     'admin/partenaire' => ['AdminPartnerController', 'index',],
     'admin/partenaire/ajouter' => ['AdminPartnerController', 'create',],
     'admin/partenaire/modifier' => ['AdminPartnerController', 'update',['id'] ],
