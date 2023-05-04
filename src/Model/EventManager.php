@@ -12,4 +12,9 @@ class EventManager extends AbstractManager
         $query = 'SELECT * FROM ' . static::TABLE . ' WHERE date>NOW() ORDER BY date ASC LIMIT 3';
         return $this->pdo->query($query)->fetchAll();
     }
+
+    public function getEvents()
+    {
+        return $this->pdo->query('SELECT * FROM ' . static::TABLE . ' ORDER BY date DESC ')->fetchAll();
+    }
 }
