@@ -1,0 +1,12 @@
+details summary[role="button"]{
+    width: 15%;
+    text-align: center;
+}
+details{
+    border-bottom: 0;
+}
+
+[role="button"]:is([aria-current], :hover, :active, :focus){
+    background-color: var(--primary);
+    border-color: var(--primary);
+}

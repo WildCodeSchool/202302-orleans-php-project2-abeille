@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import 'home.css';
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
@@ -11,7 +11,7 @@
 }
 
 :root {
-    --font-title: 'DynaPuff', cursive;
+    --font-title: 'Oswald', cursive;
     color: var(--dark);
 }
 
@@ -19,13 +19,18 @@
     background-color: var(--body);
 }
 
-body h1 {
-    color: var(--dark);
-}
 
 h1 {
     font-family: var(--font-title);
+    
 }
+
+section>h2 {
+    border-bottom: 3px solid var(--primary);
+    width: fit-content;
+    margin: auto;
+}
+
 
 p {
     color: var(--dark);
@@ -83,6 +88,46 @@ nav li{
     object-fit: cover;
 }
 
+.adminTitle {
+    border-bottom: 3px solid var(--primary);
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.adminIndex {
+    height: 6rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.adminIndex:hover {
+    background-color: var(--primary);
+}
+
+.element {
+    font-size: 1.5rem;
+}
+
+header {
+    background-image: url("/assets/images/abeilles.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80vh;
+}
+
+.headerTitle {
+    font-size: 6rem;
+}
+
+.citation {
+    font-size: 1rem;
+}
+
+.autor {
+    font-size: 0.7rem;
+}
 
 @media screen and (max-width: 760px) {
    
