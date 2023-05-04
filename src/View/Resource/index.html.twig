@@ -8,6 +8,15 @@
 {% endblock %}
 {% block content %}
 	<main class="container">
+		<h1>Liens</h1>
+		<ul>
+			{% for link in links %}
+				<li>{{ link.name }}</li>
+				<li>
+					<a href={{ link.webAdress }} target="blank">{{ link.webAdress }}</a>
+				</li>
+			{% endfor %}
+		</ul>
 		<h1>FAQ</h1>
 		{% for faq in faqs %}
 			<details>
