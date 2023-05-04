@@ -1,4 +1,6 @@
-@import url(partner.css);
+.header{
+    background-image: url("/assets/images/honeycomb_asso.jpg");
+}
 
 h1,
 h2,
@@ -8,30 +10,16 @@ h3 {
     font-family: var(--fonttitle);
 }
 
-ul li {
-    color: var(--secondary);
-    list-style: none;
-}
-
-section h2:last-of-type {
-    --typography-spacing-vertical: 4.5rem;
-    margin-top: var(--typography-spacing-vertical);
-    margin-bottom: 2.5rem;
-}
-
 h2,
 h3 {
     --font-size: 1.5rem;
     font-size: var(--font-size);
 }
 
-section h2:last-of-type {
-    margin-top: 0;
-}
-
 .grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
     gap: 2rem; 
+    margin: var(--block-spacing-horizontal);
 }
 
 article {
@@ -49,6 +37,10 @@ article img {
 
 }
 
+p {
+    padding: var(--block-spacing-horizontal) / 2;
+}
+
 .date {
     color: grey;
     align-self: center;
@@ -58,17 +50,5 @@ article img {
     display:flex;
     flex-direction: column;
     --spacing: 0.10rem;
-    padding: var(--block-spacing-horizontal);
-}
-
-article p:not(:first-of-type) {
-    text-align: left;
-}
-
-.image {
-    width: 100%;
-}
-
-main section {
-    padding: 1.5rem;
+    padding: 0,2rem;
 }

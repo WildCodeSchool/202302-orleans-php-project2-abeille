@@ -4,41 +4,40 @@
 	Admin|Faq
 {% endblock %}
 {% block stylesheet %}
-	<link rel="stylesheet" href="/assets/css/adminfaq.css">
+	<link rel="stylesheet" href="/assets/css/admin.css">
 {% endblock %}
 {% block navbar %}{% endblock %}
 {% block content %}
-	<h1>FAQ</h1>
-	<button>
-		<a href="/admin/faq/ajouter">{{ buttonName|default('Ajouter') }}</a>
-	</button>
-	<table>
-		<thead>
-			<tr>
-				<th>Liste des FAQ</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for faq in faqs %}
+	<main class="container">
+		<h1>Administration FAQ</h1>
+		<a role="button" href="/admin/faq/ajouter" >Ajouter</a>
+		<table>
+			<thead>
 				<tr>
-					<td>
-						<p>Question
-							<li>{{ faq.question }}</li>
-						</p>
-						<p>Réponse
-							<li>{{ faq.answer }}</li>
-						</p>
-					</td>
-					<td>
-						<form action="/admin/faq/supprimer?id={{ faq.id }}" method="POST">
-							<button class="outline" name="id">Supprimer</button>
-						</form>
-						<a href="/admin/faq/modifier?id={{ faq.id }}"><button class="outline">Modifier</button></a>
-					</td>
+					<th>Liste des FAQ</th>
 				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+			</thead>
+			<tbody>
+				{% for faq in faqs %}
+					<tr>
+						<td>
+							<p>Question
+								<li>{{ faq.question }}</li>
+							</p>
+							<p>Réponse
+								<li>{{ faq.answer }}</li>
+							</p>
+						</td>
+						<td>
+							<form action="/admin/faq/supprimer?id={{ faq.id }}" method="POST">
+								<button class="outline" name="id">Supprimer</button>
+							</form>
+							<a role="button" href="/admin/faq/modifier?id={{ faq.id }}" >Modifier</a>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</main>
 {% endblock %}
 {% block footer %}{% endblock %}
-
