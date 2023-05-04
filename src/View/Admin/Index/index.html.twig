@@ -1,12 +1,10 @@
-<html lang="fr" data-theme="light">
+{% extends 'layout.html.twig' %}
 {% block stylesheet %}
-    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
 	<link rel="stylesheet" href="/assets/css/admin.css">
 {% endblock %}
 {% block content %}
 	<main class="container">
-
+		{% block navbar %}{% endblock %}
 		<h1>Page d'administration globale</h1>
 		<h2 class="adminTitle">Les parties administrables</h2>
 		<a href="/admin/faq/index">
@@ -36,3 +34,4 @@
 		</a>
 	</main>
 {% endblock %}
+{% block footer %}{% endblock %}
