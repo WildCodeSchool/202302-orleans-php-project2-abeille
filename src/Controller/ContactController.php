@@ -7,9 +7,13 @@ class ContactController extends AbstractController
     public function index(): string
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $errors = $this->validate($_POST);
+            $contact = array_map('trim', $_POST);
+            $errors = $this->validate($contact);
         }
-        return $this->twig->render('Contact/contact.html.twig', ['errors' => $errors ?? []]);
+        return $this->twig->render('Contact/contact.html.twig', [
+            'errors' => $errors ?? [],
+            'contact' => $contact ?? []
+        ]);
     }
 
     private function validate(array $contact)
