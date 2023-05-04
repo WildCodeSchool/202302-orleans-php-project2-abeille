@@ -31,4 +31,5 @@ return [
     'admin/event/modifier' => ['AdminEventController', 'update', ['id']],
     'admin/event/supprimer' => ['AdminEventController', 'delete', ['id']],
     'admin/image' => ['AdminPictureController', 'index'],
+    'admin/image/ajouter' => ['AdminPictureController', 'add'],
 ];
