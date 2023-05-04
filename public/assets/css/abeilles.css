@@ -1,3 +1,7 @@
 header{
     background-image: url("../images/abeilles_abeilles.jpg");
 }
+
+p {
+    text-align: start;
+}
