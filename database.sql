@@ -117,3 +117,15 @@ CREATE TABLE `picture` (
 INSERT INTO `picture` (`name`, `date`) VALUES
 ('abeille1.jpg','2020-03-10'),
 ('apiculture.jpg','2021-04-15');
+
+CREATE TABLE `link` (
+  `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  `name` VARCHAR(255) NOT NULL,
+  `webAdress` VARCHAR(255) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `link` (`name`, `webAdress`) VALUES
+('Apiculture du haut bugey', 'https://www.apiculture-haut-bugey.com/'),
+('L\'abeille noire', 'https://www.abeillenoire.eu/cms/'),
+('Société Centrale d\'Apiculture', "https://www.la-sca.net/rucher-du-parc-georges-brassens");
+
