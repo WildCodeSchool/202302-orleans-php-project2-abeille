@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-class BeesController extends AbstractController
+class BeeController extends AbstractController
 {
     public function index(): string
     {
