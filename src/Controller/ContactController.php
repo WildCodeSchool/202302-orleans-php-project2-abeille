@@ -6,8 +6,10 @@ class ContactController extends AbstractController
 {
     public function index(): string
     {
-        $errors = $this->validate($_POST);
-        return $this->twig->render('Contact/contact.html.twig', ['errors' => $errors]);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $errors = $this->validate($_POST);
+        }
+        return $this->twig->render('Contact/contact.html.twig', ['errors' => $errors ?? []]);
     }
 
     private function validate(array $contact)
@@ -37,6 +39,6 @@ class ContactController extends AbstractController
         if (empty($contact['user_message'])) {
             $errors[] = 'Le message est obligatoire';
         }
-            return $errors;
+        return $errors;
     }
 }
