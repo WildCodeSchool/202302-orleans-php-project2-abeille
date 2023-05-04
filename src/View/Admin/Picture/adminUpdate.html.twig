@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 {% block title %}
 	{{parent()}}
-	| Image | ajout
+	| Image | Modifier
 {% endblock %}
 {% block stylesheet %}
 	<link rel="stylesheet" href="/assets/css/adminpicture.css">
@@ -9,7 +9,7 @@
 {% block navbar %}{% endblock %}
 {% block content %}
 	<main class="container">
-        <h1>Ajouter une Image</h1>
+        <h1>Modifier une Image</h1>
         <ul>
             {% for error in errors %}
                 <li>{{ error }}</li>
@@ -21,7 +21,7 @@
 			<input type="file" id="nom" name="image" value="{{picture.name}}">
 
 			<label for="date">votre Date</label>
-			<input type="date" id="date" name="date" required value=" {{ picture.date }}">
+			<input type="date" id="date" name="date" required value="{{picture.date}}">
 
 			<button>Valider</button>
 		</form>
