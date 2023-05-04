@@ -1,7 +1,10 @@
 {% extends 'layout.html.twig' %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/admin.css">
+{% endblock %}
 {% block content %}
 	<main class="container">
-
+		{% block navbar %}{% endblock %}
 		<h1>Page d'administration globale</h1>
 		<h2 class="adminTitle">Les parties administrables</h2>
 		<a href="/admin/faq/index">
@@ -19,7 +22,7 @@
 				<p class="element">Les événements</p>
 			</article>
 		</a>
-		<a href="">
+		<a href="admin/image">
 			<article class="adminIndex">
 				<p class="element">Les photos</p>
 			</article>
@@ -31,3 +34,4 @@
 		</a>
 	</main>
 {% endblock %}
+{% block footer %}{% endblock %}
