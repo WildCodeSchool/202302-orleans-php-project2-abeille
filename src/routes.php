@@ -33,4 +33,5 @@ return [
     'admin' => ['AdminController', 'index'],
     'admin/image' => ['AdminPictureController', 'index'],
     'admin/image/ajouter' => ['AdminPictureController', 'add'],
+    'admin/link/ajouter' => ['AdminLinkController', 'add'],
 ];
