@@ -1,0 +1,16 @@
+header{
+    background-image: url("../images/abeilles_abeilles.jpg");
+}
+
+p {
+    text-align: start;
+    padding: 1rem;
+}
+
+.Physio img,
+.Description img {
+    width: clamp(10rem, 100%, 25rem);
+    height: auto;
+    float: left;
+    margin: var(--spacing) ;
+}
