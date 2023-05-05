@@ -1,0 +1,31 @@
+{% extends 'layout.html.twig' %}
+{% block title %}
+	{{parent()}}
+	| Image | Modifier
+{% endblock %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/adminpicture.css">
+{% endblock %}
+{% block navbar %}{% endblock %}
+{% block content %}
+	<main class="container">
+        <h1>Modifier une Image</h1>
+        <ul>
+            {% for error in errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        <form action="" method="POST" enctype="multipart/form-data">
+
+			<label for="nom">Votre image</label>
+			<input type="file" id="nom" name="image">
+
+			<label for="date">votre Date</label>
+			<input type="date" id="date" name="date" required value="{{picture.date}}">
+
+			<button>Valider</button>
+		</form>
+        <a href="/admin/image">Retour</a>
+    </main>
+{% endblock %}
+{% block footer %}{% endblock %}
