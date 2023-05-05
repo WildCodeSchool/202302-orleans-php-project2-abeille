@@ -1,12 +1,16 @@
 {% extends 'layout.html.twig' %}
+{% block title %}
+	{{parent()}}
+	| Abeilles
+{% endblock %}
 {% block stylesheet %}
 	<link rel="stylesheet" href="/assets/css/abeilles.css">
 {% endblock %}
 {% block content %}
-	<main class="container">
-	<header>
+	<header class="header">
 		<h1>Les abeilles</h1>
 	</header>
+	<main class="container">
 		<h2>Description</2>
 			<section class="Description">
 			<img src="assets/images/anatomie_abeille.jpg" alt="anatomie d'une abeille">
