@@ -4,7 +4,7 @@
 	Admin|Images
 {% endblock %}
 {% block stylesheet %}
-	<link rel="stylesheet" href="/assets/css/adminimage.css">
+	<link rel="stylesheet" href="/assets/css/admin.css">
 {% endblock %}
 {% block navbar %}{% endblock %}
 {% block content %}
@@ -24,6 +24,9 @@
 						<td>{{picture.name}}</td>
 						<td>{{picture.date}}</td>
 						<td>
+							<form action="/admin/image/supprimer?id={{ picture.id }}" method="POST">
+								<button class="outline" name="id">Supprimer</button>
+							</form>
 							<a role="button" href="/admin/image/modifier?id={{ picture.id }}" >Modifier</a>
 						</td>
 					</tr>

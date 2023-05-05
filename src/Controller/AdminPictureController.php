@@ -125,4 +125,15 @@ class AdminPictureController extends AbstractController
 
         return $this->twig->render('Admin/Picture/adminUpdate.html.twig', ['errors' => $errors, 'picture' => $picture]);
     }
+
+    public function delete(int $id): void
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $pictureManager = new PictureManager();
+            $picture = $pictureManager->selectOneById($id);
+            $this->deleteFile($picture['name']);
+            $pictureManager->delete((int)$id);
+            header('Location:/admin/image');
+        }
+    }
 }
