@@ -24,7 +24,7 @@
 
 h1 {
     font-family: var(--font-title);
-    
+
 }
 
 section>h2 {
@@ -77,7 +77,7 @@ nav li {
     --nav-element-spacing-vertical: 0;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,7 +87,7 @@ nav li {
     height: 50vh;
 }
 
-.header>h1{
+.header>h1 {
     font-size: calc(var(--font-size) * 2);
     background-color: var(--transparent-body);
     width: fit-content;
@@ -115,6 +115,17 @@ nav li {
 
 .container {
     padding-bottom: 0;
+}
+
+
+[role="button"] {
+    width: 12rem;
+    color: var(--dark);
+    margin-inline: 5rem;
+}
+
+[role="button"]:hover {
+    background-color: var(--light);
 }
 
 .adminTitle {
@@ -156,7 +167,6 @@ header {
 
 .autor {
     font-size: 0.7rem;
->>>>>>> 8d03c8fcb116d72034d3dabef63d4ed84a4532ab
 }
 
 @media screen and (max-width: 760px) {
@@ -179,20 +189,4 @@ header {
         margin: calc(var(--nav-link-spacing-vertical) * 0.5);
     }
 }
-<<<<<<< HEAD
-=======
-.container {
-    padding-bottom: 0;
-}
 
-[role="button"] {
-    width: 12rem;
-    color: var(--dark);
-    margin-inline: 5rem; 
-}
-
-[role="button"]:hover {
-    background-color: var(--light);
-}
-
->>>>>>> 8d03c8fcb116d72034d3dabef63d4ed84a4532ab
