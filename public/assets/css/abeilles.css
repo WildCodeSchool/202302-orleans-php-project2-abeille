@@ -1,5 +1,5 @@
-.history img,
-.honey img {
+.Physio img,
+.Description img {
     width: clamp(10rem, 100%, 25rem);
     height: auto;
     float: left;
@@ -7,5 +7,5 @@
 }
 
 .header {
-    background-image: url("/assets/images/beekeepingHeader.jpg")
+    background-image: url("../images/abeilles_abeilles.jpg")
 }
