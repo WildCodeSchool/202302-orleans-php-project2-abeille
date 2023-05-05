@@ -35,4 +35,5 @@ return [
     'admin/image' => ['AdminPictureController', 'index'],
     'admin/image/ajouter' => ['AdminPictureController', 'add'],
     'admin/image/modifier' => ['AdminPictureController', 'update', ['id']],
+    'admin/image/supprimer' => ['AdminPictureController', 'delete', ['id']],
 ];
