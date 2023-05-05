@@ -5,3 +5,7 @@
     float: left;
     margin: var(--spacing) ;
 }
+
+.header {
+    background-image: url("/assets/images/beekeepingHeader.jpg")
+}
