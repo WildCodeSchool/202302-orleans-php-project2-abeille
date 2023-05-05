@@ -1,31 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import 'home.css';
+
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
     --primary: #F7CD46;
     --secondary: #522b14;
     --light: #fff5d0;
     --body: #FFFAE8;
+    --transparent-body: #fffae888;
     --dark: #230a04;
     --dark: #230a04;
 }
 
 :root {
-    --font-title: 'DynaPuff', cursive;
+    --font-title: 'Oswald', cursive;
     color: var(--dark);
 }
 
-.container-fluid{
+.container-fluid {
     background-color: var(--body);
 }
 
-body h1 {
-    color: var(--dark);
-}
 
 h1 {
     font-family: var(--font-title);
+    
 }
+
+section>h2 {
+    border-bottom: 3px solid var(--primary);
+    width: fit-content;
+    margin: auto;
+}
+
 
 p {
     color: var(--dark);
@@ -35,18 +42,19 @@ nav {
     background-color: var(--secondary);
     margin: 0;
     padding: 0.5rem;
-    min-height: 6rem;
+    min-height: 10rem;
     width: 100%;
 }
 
 nav img {
-    width: 4rem;
+    width: 6rem;
 }
 
 nav a {
     background-color: var(--secondary);
     color: var(--light);
     padding: 1rem;
+    font-size: clamp(var(--font-size), 2vw, (var(--font-size) * 2));
 }
 
 nav :where(a, [role="link"]) {
@@ -54,7 +62,7 @@ nav :where(a, [role="link"]) {
     margin: calc(var(--nav-link-spacing-vertical) * -1) calc(var(--nav-link-spacing-horizontal) * +0.5);
 }
 
-nav > ul:not(:first-child) a:hover {
+nav>ul:not(:first-child) a:hover {
     background-color: var(--primary);
     color: var(--secondary);
 }
@@ -63,19 +71,37 @@ nav ul {
     display: flex;
     justify-content: center;
 }
-nav li{
+
+nav li {
     --nav-element-spacing-horizontal: 0;
     --nav-element-spacing-vertical: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/images/honeycomb_asso.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+}
+
+.header>h1{
+    font-size: calc(var(--font-size) * 2);
+    background-color: var(--transparent-body);
+    width: fit-content;
+    border-radius: 10px;
+    padding-inline: 1rem;
 }
 
 .burger-icon {
     display: none;
 }
 
-.close{
+.close {
     display: none;
 }
-
 
 .image {
     width: 100%;
@@ -83,26 +109,90 @@ nav li{
 }
 
 
+.errors>li {
+    color: rgb(255, 0, 0);
+}
+
+.container {
+    padding-bottom: 0;
+}
+
+.adminTitle {
+    border-bottom: 3px solid var(--primary);
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.adminIndex {
+    height: 6rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.adminIndex:hover {
+    background-color: var(--primary);
+}
+
+.element {
+    font-size: 1.5rem;
+}
+
+header {
+    background-image: url("/assets/images/abeilles.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80vh;
+}
+
+.headerTitle {
+    font-size: 6rem;
+}
+
+.citation {
+    font-size: 1rem;
+}
+
+.autor {
+    font-size: 0.7rem;
+>>>>>>> 8d03c8fcb116d72034d3dabef63d4ed84a4532ab
+}
+
 @media screen and (max-width: 760px) {
-   
-    .links{
-    display:none;
+
+    .links {
+        display: none;
     }
 
     .burger-icon {
-        display:block;
+        display: block;
     }
 
-    .links:target{
+    .links:target {
         display: flex;
         flex-direction: column;
     }
 
     nav a {
-        padding : 0.5rem;
+        padding: 0.5rem;
         margin: calc(var(--nav-link-spacing-vertical) * 0.5);
     }
 }
+<<<<<<< HEAD
+=======
 .container {
     padding-bottom: 0;
 }
+
+[role="button"] {
+    width: 12rem;
+    color: var(--dark);
+    margin-inline: 5rem; 
+}
+
+[role="button"]:hover {
+    background-color: var(--light);
+}
+
+>>>>>>> 8d03c8fcb116d72034d3dabef63d4ed84a4532ab

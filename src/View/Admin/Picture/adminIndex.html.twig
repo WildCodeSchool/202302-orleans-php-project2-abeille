@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 {% block title %}
 	{{parent()}}
-	Admin|Évènements
+	Admin|Images
 {% endblock %}
 {% block stylesheet %}
 	<link rel="stylesheet" href="/assets/css/admin.css">
@@ -9,35 +9,30 @@
 {% block navbar %}{% endblock %}
 {% block content %}
 	<main class="container">
-		<h1>Administration Évènements</h1>
-		<a role="button" href="/admin/event/ajouter">Ajouter</a>
+		<h1>Liste des Images</h1>
+		<a role="button" href="/admin/image/ajouter" >Ajouter</a>
 		<table>
 			<thead>
 				<tr>
 					<th>Nom</th>
-					<th>Description</th>
-					<th>Location</th>
 					<th>Date</th>
 				</tr>
 			</thead>
 			<tbody>
-				{% for event in events %}
+				{% for picture in pictures %}
 					<tr>
-						<td>{{ event.name }}</td>
-						<td>{{ event.description }}</td>
-						<td>{{event.location}}</td>
-						<td>{{event.date}}</td>
+						<td>{{picture.name}}</td>
+						<td>{{picture.date}}</td>
 						<td>
-							<form action="/admin/event/supprimer?id={{ event.id }}" method="POST">
+							<form action="/admin/image/supprimer?id={{ picture.id }}" method="POST">
 								<button class="outline" name="id">Supprimer</button>
 							</form>
-							<a role="button" href="/admin/event/modifier?id={{ event.id }}" >Modifier</a>
+							<a role="button" href="/admin/image/modifier?id={{ picture.id }}" >Modifier</a>
 						</td>
 					</tr>
 				{% endfor %}
 			</tbody>
 		</table>
 	</main>
-
 {% endblock %}
 {% block footer %}{% endblock %}

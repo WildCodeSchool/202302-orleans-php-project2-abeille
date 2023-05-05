@@ -1,0 +1,37 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/admin.css">
+{% endblock %}
+{% block content %}
+	<main class="container">
+		{% block navbar %}{% endblock %}
+		<h1>Page d'administration globale</h1>
+		<h2 class="adminTitle">Les parties administrables</h2>
+		<a href="/admin/faq">
+			<article class="adminIndex">
+				<p class="element">La FAQ</p>
+			</article>
+		</a>
+		<a href="/admin/partenaire">
+			<article class="adminIndex">
+				<p class="element">Les partenaires</p>
+			</article>
+		</a>
+		<a href="/admin/event/index">
+			<article class="adminIndex">
+				<p class="element">Les événements</p>
+			</article>
+		</a>
+		<a href="admin/image">
+			<article class="adminIndex">
+				<p class="element">Les photos</p>
+			</article>
+		</a>
+		<a href="">
+			<article class="adminIndex">
+				<p class="element">Les liens</p>
+			</article>
+		</a>
+	</main>
+{% endblock %}
+{% block footer %}{% endblock %}
