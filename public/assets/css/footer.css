@@ -19,7 +19,7 @@ body>footer {
     height: 6rem;
 }
 
-button {
+a[role=button] {
     width: 12rem;
     height: 3rem;
     background-color: var(--primary);
@@ -28,7 +28,7 @@ button {
     margin-left: 5rem;
 }
 
-button:hover {
+a[role=button]:hover {
     background-color: var(--light);
 }
 

@@ -1,14 +1,24 @@
 p {
-    margin-inline-start: 2rem;
+    margin: var(--spacing);
 }
 
-li {
-    margin: 1rem;
-    list-style-type: none;
+details>p {
+    background: var(--light);
+    border: solid 1px var(--dark);
+    margin-block-end: 0;
+    padding: var(--spacing);
+    border-radius: 5px;
 }
 
-h1 {
-    --faq-typography-spacing-vertical: 0.5rem;
-    margin: var(--faq-typography-spacing-vertical);
-    text-align: center;
+summary {
+    border: solid 1px var(--dark);
+    margin: var(--spacing);
+    padding: var(--spacing);
+    border-radius: 5px;
 }
+
+details summary:not([role]) {
+    color: var(--dark);
+}
+  
+

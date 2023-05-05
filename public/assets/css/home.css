@@ -5,7 +5,7 @@ h2,
 h3 {
     text-align: center;
     color: var(--secondary);
-    font-family: var(--fonttitle)
+    font-family: var(--fonttitle);
 }
 
 ul li {

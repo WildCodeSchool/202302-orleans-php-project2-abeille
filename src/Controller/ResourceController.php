@@ -2,18 +2,18 @@
 
 namespace App\Controller;
 
+use App\Model\LinkManager;
 use App\Model\FaqManager;
 
 class ResourceController extends AbstractController
 {
-    /**
-     * Display home page
-     */
     public function index(): string
     {
         $faqManager = new FaqManager();
-        $faq = $faqManager->selectAll();
+        $faqs = $faqManager->selectAll();
+        $linkManager = new LinkManager();
+        $links = $linkManager->selectAll();
 
-        return $this->twig->render('Resource/index.html.twig', ['faq' => $faq]);
+        return $this->twig->render('Resource/index.html.twig', ['faqs' => $faqs, 'links' => $links]);
     }
 }
