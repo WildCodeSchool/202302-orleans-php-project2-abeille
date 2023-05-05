@@ -36,4 +36,5 @@ return [
     'abeilles' => ['BeeController', 'index'],
     'contact' => ['ContactController', 'index'],
     'ressource' => ['ResourceController', 'index',],
+    'admin/image/supprimer' => ['AdminPictureController', 'delete', ['id']],
 ];
