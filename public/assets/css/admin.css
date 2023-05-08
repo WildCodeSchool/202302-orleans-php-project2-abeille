@@ -42,3 +42,7 @@ th {
     margin-block: 1rem;
 }
 
+button:is([aria-current], :hover, :active, :focus) {
+    border-color: var(--dark);
+}
+
