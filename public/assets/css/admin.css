@@ -30,6 +30,10 @@ button.outline:hover{
     border: 1px solid var(--dark);
 }
 
+button:hover {
+    background-color: var(--light);
+}
+
 li {
     list-style: none;
 }

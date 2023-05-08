@@ -157,6 +157,10 @@ header {
     height: 80vh;
 }
 
+button:hover {
+    background-color: var(--light);
+}
+
 .headerTitle {
     font-size: 6rem;
 }
