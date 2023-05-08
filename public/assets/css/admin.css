@@ -5,6 +5,11 @@ button {
     padding: 0;
 }
 
+a.buttonHome {
+    width: 65%;
+}
+
+
 [role="button"] {
     color: var(--dark);
     font-size: 0.7rem;
@@ -28,10 +33,6 @@ button.outline {
 
 button.outline:hover{
     border: 1px solid var(--dark);
-}
-
-button:hover {
-    background-color: var(--light);
 }
 
 li {
