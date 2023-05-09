@@ -68,10 +68,6 @@ a:is([aria-current], :hover, :active, :focus) {
     text-decoration: none;
 }
 
-a:is([aria-current], :hover, :active, :focus) {
-    text-decoration: none;
-}
-
 .container {
     min-height: 100vh;
 }
