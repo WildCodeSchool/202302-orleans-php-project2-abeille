@@ -19,7 +19,7 @@ body>footer {
     height: 6rem;
 }
 
-button {
+a[role=button] {
     width: 12rem;
     height: 3rem;
     background-color: var(--primary);
@@ -28,7 +28,7 @@ button {
     margin-left: 5rem;
 }
 
-button:hover {
+a[role=button]:hover {
     background-color: var(--light);
 }
 
@@ -80,14 +80,23 @@ img {
         color: var(--primary);
     }
 
+    a[role=button] {
+        margin-left: 0;
+        margin-right: 0;
+        width: 4.5rem;
+        font-size: 0.6rem;
+        padding-top: 15px;
+    }
+
+
     .button-contact,
     .button-faq {
         background-color: var(--primary);
         color: var(--secondary);
         margin-bottom: 0.3rem;
         margin-top: 0.3rem;
-        margin-right: 0.4rem;
-        margin-left: 0.4rem;
+        margin-right: 0rem;
+        margin-left: 0rem;
         font-size: 0.7rem;
     }
 

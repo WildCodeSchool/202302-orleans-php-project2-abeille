@@ -7,12 +7,22 @@
 	<link rel="stylesheet" href="assets/css/faq.css">
 {% endblock %}
 {% block content %}
-	<h1>FAQ</h1>
-	{% for faq in faqs %}
-		<p>Question:<li>{{ faq.question }}</li>
-		</p>
-		<p>Réponse:
-			<li>{{ faq.answer}}</li>
-		</p>
-	{% endfor %}
+	<main class="container">
+		<h1>Liens</h1>
+		<ul>
+			{% for link in links %}
+				<li>{{ link.name }}</li>
+				<li>
+					<a href={{ link.webAdress }} target="blank">{{ link.webAdress }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+		<h1>FAQ</h1>
+		{% for faq in faqs %}
+			<details>
+				<summary>{{ faq.question }}</summary>
+				<p>{{ faq.answer }}</p>
+			</details>
+		{% endfor %}
+	</main>
 {% endblock %}

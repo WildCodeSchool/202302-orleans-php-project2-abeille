@@ -4,7 +4,7 @@
 	| Faq | Modifier
 {% endblock %}
 {% block stylesheet %}
-	<link rel="stylesheet" href="/assets/css/adminfaq.css">
+	<link rel="stylesheet" href="/assets/css/admin.css">
 {% endblock %}
 {% block navbar %}{% endblock %}
 {% block content %}
@@ -24,7 +24,7 @@
 			<textarea  type="text" name="answer" id="answer" required>{{ faq.answer }}</textarea>
 			<button>Modifier</button>
 		</form>
-		<a href="/admin/faq/index">Retour</a>
+		<a href="/admin/faq">Retour</a>
 	</main>
 {% endblock %}
 {% block footer %}{% endblock %}

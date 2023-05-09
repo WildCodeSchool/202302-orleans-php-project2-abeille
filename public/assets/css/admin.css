@@ -1,0 +1,60 @@
+button {
+    width: 5rem;
+    height: 2rem;
+    font-size: 0.7rem;
+    padding: 0;
+}
+
+a.buttonHome {
+    width: 65%;
+}
+
+
+[role="button"] {
+    color: var(--dark);
+    font-size: 0.7rem;
+    padding: 0.5rem;
+}
+
+[role="button"]:hover {
+    background-color: var(--light);
+    border-color: var(--dark);
+}
+
+a {
+    width: 5rem;
+    height: 2rem;
+    margin: 1rem 5rem ;
+}
+
+button.outline {
+    margin: 1rem 5rem ;
+    background-color: var(--primary);
+    color: var(--dark);
+}
+
+button.outline:hover{
+    border: 1px solid var(--dark);
+    background-color: var(--light);
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+th {
+    margin-block: 1rem;
+}
+
+a[role="button"] {
+    width: 5rem;
+    height: 2rem;
+}
+
+a:is([aria-current], :hover, :active, :focus) {
+    text-decoration: none;
+}
