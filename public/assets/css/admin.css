@@ -100,3 +100,7 @@ a.return {
     padding-top: 10px;
     
 }
+
+.svgAdmin {
+fill: var(--dark);
+}
