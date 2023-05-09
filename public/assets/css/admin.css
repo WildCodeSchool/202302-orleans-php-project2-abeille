@@ -29,10 +29,13 @@ a {
 
 button.outline {
     margin: 1rem 5rem ;
+    background-color: var(--primary);
+    color: var(--dark);
 }
 
 button.outline:hover{
     border: 1px solid var(--dark);
+    background-color: var(--light);
 }
 
 li {
@@ -47,3 +50,11 @@ th {
     margin-block: 1rem;
 }
 
+a[role="button"] {
+    width: 5rem;
+    height: 2rem;
+}
+
+a:is([aria-current], :hover, :active, :focus) {
+    text-decoration: none;
+}
