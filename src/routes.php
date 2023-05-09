@@ -38,4 +38,5 @@ return [
     'contact' => ['ContactController', 'index'],
     'ressource' => ['ResourceController', 'index',],
     'admin/image/supprimer' => ['AdminPictureController', 'delete', ['id']],
+    'admin/lien/supprimer' => ['AdminLinkController', 'delete', ['id']],
 ];
