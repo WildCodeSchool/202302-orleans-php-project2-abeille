@@ -29,6 +29,10 @@ class AdminLinkController extends AbstractController
         if (mb_strlen($link['webAdress']) > $maxLength) {
             $errors[] = 'Le champ url doit faire moins de ' . $maxLength . ' caractères';
         }
+
+        if (!filter_var($link['webAdress'], FILTER_VALIDATE_URL)) {
+            $errors[] = "L'URL n'est pas valide";
+        }
         return $errors;
     }
 
