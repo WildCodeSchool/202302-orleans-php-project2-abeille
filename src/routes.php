@@ -32,6 +32,7 @@ return [
     'admin/faq' => ['AdminFaqController', 'index',],
     'admin/faq/ajouter' => ['AdminFaqController', 'add',],
     'admin/faq/modifier' => ['AdminFaqController', 'update', ['id']],
+    'admin/lien/ajouter' => ['AdminLinkController', 'add'],
     'admin/faq/supprimer' => ['AdminFaqController', 'delete', ['id']],
     'abeilles' => ['BeeController', 'index'],
     'contact' => ['ContactController', 'index'],
