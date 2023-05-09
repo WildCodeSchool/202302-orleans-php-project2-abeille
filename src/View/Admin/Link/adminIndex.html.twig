@@ -1,0 +1,34 @@
+{% extends 'layout.html.twig' %}
+{% block title %}
+	{{parent()}}
+	Admin|Faq
+{% endblock %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/admin.css">
+{% endblock %}
+{% block navbar %}{% endblock %}
+{% block content %}
+	<main class="container">
+		<h1>Administration Lien</h1>
+		<a role="button" href="/admin/lien/ajouter">Ajouter</a>
+		<table>
+			<thead>
+				<tr>
+					<th>Liste des Liens</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for link in links %}
+					<tr>
+						<td>
+							<p>Nom
+								<li>{{ link.name }}</li>
+							</p>
+						{% endfor %}
+					</tr>
+				</tbody>
+			</tbody>
+		</table>
+	</main>
+{% endblock %}
+{% block footer %}{% endblock %}
