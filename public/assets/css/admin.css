@@ -88,3 +88,10 @@ a.buttonHome {
     height: 5vh;
     font-size: large;
 }
+
+a.return {
+    outline: solid var(--primary);
+    background-color: transparent;
+    width: 7rem;
+    height: 2rem;
+}
