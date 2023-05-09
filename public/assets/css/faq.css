@@ -25,7 +25,7 @@ details summary:not([role]) {
 }
 
 a {
-    color: black;
+    color: var(--dark);
 }
 
 a:is([aria-current], :hover, :active, :focus) {
