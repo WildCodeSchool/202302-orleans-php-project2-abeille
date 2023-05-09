@@ -27,7 +27,7 @@ h1 {
 
 }
 
-section>h2 {
+h2 {
     border-bottom: 3px solid var(--primary);
     width: fit-content;
     margin: auto;
@@ -42,19 +42,19 @@ nav {
     background-color: var(--secondary);
     margin: 0;
     padding: 0.5rem;
-    min-height: 10rem;
+    min-height: 6rem;
     width: 100%;
 }
 
 nav img {
-    width: 6rem;
+    width: 4rem;
 }
 
 nav a {
     background-color: var(--secondary);
     color: var(--light);
     padding: 1rem;
-    font-size: clamp(var(--font-size), 2vw, (var(--font-size) * 2));
+    font-size: clamp(var(--font-size), 2vw, (var(--font-size) * 1.1));
 }
 
 nav :where(a, [role="link"]) {
@@ -154,7 +154,7 @@ header {
     background-image: url("/assets/images/abeilles.jpeg");
     background-size: cover;
     background-attachment: fixed;
-    height: 80vh;
+    height: 88vh;
 }
 
 button:hover {
@@ -166,11 +166,18 @@ button:hover {
 }
 
 .citation {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    border-bottom: none;
+    margin-bottom: 1.5rem;
 }
 
 .autor {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
+}
+
+.assoParagraph {
+    text-align: center;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 760px) {
