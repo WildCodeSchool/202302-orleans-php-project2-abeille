@@ -52,7 +52,7 @@ class AdminFaqController extends AbstractController
             $faqManager = new FaqManager();
             $faqManager->delete((int)$id);
 
-            header('Location:/admin/faq/index');
+            header('Location:/admin/faq');
         }
     }
 
@@ -72,7 +72,7 @@ class AdminFaqController extends AbstractController
                 $faq['id'] = $id;
                 $faqManager->update($faq);
 
-                header('Location: /admin/faq/index');
+                header('Location: /admin/faq');
             }
         }
 
