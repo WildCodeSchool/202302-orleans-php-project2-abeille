@@ -6,9 +6,6 @@ button {
     color: var(--dark);
 }
 
-a.buttonHome {
-    width: 65%;
-}
 
 
 [role="button"] {
@@ -70,4 +67,16 @@ a:is([aria-current], :hover, :active, :focus) {
 
 .container {
     min-height: 100vh;
+}
+
+a.buttonHome {
+    width: 70vh;
+    height: 5vh;
+    font-size: large;
+}
+
+a.buttonHome {
+    width: 70vh;
+    height: 5vh;
+    font-size: large;
 }
