@@ -50,9 +50,17 @@ th {
     margin-block: 1rem;
 }
 
+button:is([aria-current], :hover, :active, :focus) {
+    border-color: var(--dark);
+}
+
 a[role="button"] {
     width: 5rem;
     height: 2rem;
+}
+
+a:is([aria-current], :hover, :active, :focus) {
+    text-decoration: none;
 }
 
 a:is([aria-current], :hover, :active, :focus) {
