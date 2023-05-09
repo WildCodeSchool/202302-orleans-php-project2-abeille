@@ -53,4 +53,14 @@ class AdminLinkController extends AbstractController
         }
         return $this->twig->render('Admin/Link/adminAdd.html.twig', ['errors' => $errors, 'link' => $link]);
     }
+
+    public function delete(int $id): void
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $linkManager = new LinkManager();
+            $linkManager->delete((int)$id);
+
+            header('Location:/admin/lien/index');
+        }
+    }
 }
