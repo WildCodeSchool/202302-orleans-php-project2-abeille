@@ -5,6 +5,11 @@ button {
     padding: 0;
 }
 
+a.buttonHome {
+    width: 65%;
+}
+
+
 [role="button"] {
     color: var(--dark);
     font-size: 0.7rem;
