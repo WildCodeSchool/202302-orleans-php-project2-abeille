@@ -1,18 +1,21 @@
-p {
-    margin: var(--spacing);
-}
-
 details>p {
-    background: var(--light);
+    background: var(--dark);
     border: solid 1px var(--dark);
-    margin-block-end: 0;
+    margin-block-start: -20px;
+    margin-inline: var(--spacing);
     padding: var(--spacing);
     border-radius: 5px;
+    color: var(--light);
+}
+
+details {
+    border-bottom: solid 2px var(--dark);
+    margin-block-start: var(--spacing);
 }
 
 summary {
     border: solid 1px var(--dark);
-    margin: var(--spacing);
+    margin-inline: var(--spacing);
     padding: var(--spacing);
     border-radius: 5px;
 }

@@ -5,3 +5,13 @@
     float: left;
     margin: var(--spacing) ;
 }
+
+.header {
+    background-image: url("/assets/images/beekeepingHeader.jpg")
+}
+
+h1 {
+    text-align: center;
+    color: var(--secondary);
+    font-family: var(--fonttitle);
+}
