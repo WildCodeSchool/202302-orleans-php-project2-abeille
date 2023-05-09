@@ -68,4 +68,72 @@ class AdminPictureController extends AbstractController
 
         return $this->twig->render('admin/Picture/adminAdd.html.twig', ['errors' => $errors, 'picture' => $picture]);
     }
+
+    // Efface un fichier (pour le delete et l'update)
+    private function deleteFile(string $fileName)
+    {
+        if (
+            !empty($fileName) && file_exists(__DIR__ . '/../../public/uploads/' . $fileName)
+        ) {
+            unlink(__DIR__ . '/../../public/uploads/' . $fileName);
+        }
+    }
+
+    public function update(int $id): string
+    {
+        $pictureManager = new PictureManager();
+        $picture = $pictureManager->selectOneById($id);
+        $lastImage = $picture['name'];
+        $errors = [];
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $picture = array_map('trim', $_POST);
+            $errors = $this->validate($picture);
+
+            if ($_FILES['image']['error'] !== 0) {
+                $errors[] = 'Problème avec l\'upload, veuillez rééssayer';
+            } else {
+                $limitFileSize = 1000000;
+                if ($_FILES['image']['size'] > $limitFileSize) {
+                    $errors[] = 'Le fichier doit faire moins de ' . $limitFileSize / 1000000 . 'MO';
+                }
+
+                $authorizedMimes = ['name/jpeg', 'name/png', 'name/jpg', 'name/webp'];
+                if (in_array(mime_content_type($_FILES['image']['tmp_name']), $authorizedMimes)) {
+                    $errors[] = 'Le type de fichier est incorrect. Types autorisés: ' . implode(', ', $authorizedMimes);
+                }
+            }
+
+            if (empty($errors)) {
+                $pictureManager = new PictureManager();
+                $picture['name'] = $lastImage;
+                $picture['id'] = $id;
+
+                if (!empty($_FILES['image']['tmp_name'])) {
+                    $this->deleteFile($lastImage);
+                    $extension = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+                    $baseFileName = pathinfo($_FILES['image']['name'], PATHINFO_FILENAME);
+                    $imageName = uniqid($baseFileName, more_entropy: true) . '.' . $extension;
+                    $picture['name'] = $imageName;
+                    move_uploaded_file($_FILES['image']['tmp_name'], __DIR__ . '/../../public/uploads/'  . $imageName);
+                }
+
+                $pictureManager->update($picture);
+                header('Location: /admin/image');
+            }
+        }
+
+        return $this->twig->render('Admin/Picture/adminUpdate.html.twig', ['errors' => $errors, 'picture' => $picture]);
+    }
+
+    public function delete(int $id): void
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $pictureManager = new PictureManager();
+            $picture = $pictureManager->selectOneById($id);
+            $this->deleteFile($picture['name']);
+            $pictureManager->delete((int)$id);
+            header('Location:/admin/image');
+        }
+    }
 }
