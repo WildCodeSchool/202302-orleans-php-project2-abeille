@@ -70,13 +70,8 @@ a:is([aria-current], :hover, :active, :focus) {
 }
 
 a.buttonHome {
-    width: 70vh;
-    height: 5vh;
+    width: 20rem;
+    height: 3rem;
     font-size: large;
-}
-
-a.buttonHome {
-    width: 70vh;
-    height: 5vh;
-    font-size: large;
+    padding: 1rem;
 }
