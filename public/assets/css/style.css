@@ -204,7 +204,6 @@ button:hover {
         margin: calc(var(--nav-link-spacing-vertical) * 0.5);
     }
 }
-<<<<<<< HEAD
 
 .container {
     padding-bottom: 0;
@@ -219,5 +218,3 @@ button:hover {
 [role="button"]:hover {
     background-color: var(--light);
 }
-=======
->>>>>>> a9b89d881ef612a92ce9bead04daea967f11cb08
