@@ -15,19 +15,13 @@
 			<thead>
 				<tr>
 					<th>Nom</th>
-					<th>Description</th>
-					<th>Location</th>
-					<th>Date</th>
 				</tr>
 			</thead>
 			<tbody>
 				{% for event in events %}
 					<tr>
 						<td>{{ event.name }}</td>
-						<td>{{ event.description }}</td>
-						<td>{{event.location}}</td>
-						<td>{{event.date}}</td>
-						<td>
+						<td class="btn-add-suppr">
 							<form action="/admin/event/supprimer?id={{ event.id }}" method="POST">
 								<button class="outline" name="id">Supprimer</button>
 							</form>
@@ -35,6 +29,7 @@
 						</td>
 					</tr>
 				{% endfor %}
+				<a role="button" href="/admin">Retour</a>
 			</tbody>
 		</table>
 	</main>

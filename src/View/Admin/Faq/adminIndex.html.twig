@@ -24,11 +24,8 @@
 							<p>Question
 								<li>{{ faq.question }}</li>
 							</p>
-							<p>Réponse
-								<li>{{ faq.answer }}</li>
-							</p>
 						</td>
-						<td>
+						<td class="btn-add-suppr">
 							<form action="/admin/faq/supprimer?id={{ faq.id }}" method="POST">
 								<button class="outline" name="id">Supprimer</button>
 							</form>
@@ -36,6 +33,7 @@
 						</td>
 					</tr>
 				{% endfor %}
+				<a role="button" href="/admin">Retour</a>
 			</tbody>
 		</table>
 	</main>

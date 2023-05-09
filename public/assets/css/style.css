@@ -17,6 +17,10 @@
     color: var(--dark);
 }
 
+html {
+    background-color: var(--body);
+}
+
 .container-fluid {
     background-color: var(--body);
 }
@@ -203,4 +207,18 @@ button:hover {
         padding: 0.5rem;
         margin: calc(var(--nav-link-spacing-vertical) * 0.5);
     }
+}
+
+.container {
+    padding-bottom: 0;
+}
+
+[role="button"] {
+    width: 12rem;
+    color: var(--dark);
+    margin-inline: 5rem; 
+}
+
+[role="button"]:hover {
+    background-color: var(--light);
 }

@@ -16,15 +16,13 @@
 			<thead>
 				<tr>
 					<th>Nom</th>
-					<th>Lien</th>
 				</tr>
 			</thead>
 			<tbody>
 				{% for partner in partners %}
 					<tr>
 						<td>{{ partner.name }}</td>
-						<td>{{ partner.link }}</td>
-						<td>
+						<td class="btn-add-suppr">
 							<form action="/admin/partenaire/supprimer?id={{ partner.id }}" method="POST">
 								<button class="outline" name="id">Supprimer</button>
 							</form>
@@ -32,6 +30,7 @@
 						</td>
 					</tr>
 				{% endfor %}
+				<a role="button" href="/admin">Retour</a>
 			</tbody>
 		</table>
 	</main>

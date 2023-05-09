@@ -5,6 +5,10 @@ button {
     padding: 0;
 }
 
+table{
+margin-bottom: 0;
+}
+
 a.buttonHome {
     width: 65%;
 }
@@ -50,6 +54,11 @@ th {
     margin-block: 1rem;
 }
 
+th,td{
+    --spacing:0.7rem;
+    padding: var(--spacing);
+}
+
 button:is([aria-current], :hover, :active, :focus) {
     border-color: var(--dark);
 }
@@ -65,4 +74,17 @@ a:is([aria-current], :hover, :active, :focus) {
 
 a:is([aria-current], :hover, :active, :focus) {
     text-decoration: none;
+}
+
+.btn-add-suppr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}  
+a.buttonHome {
+    width: 70vh;
+    height: 5vh;
+    font-size: large;
 }
