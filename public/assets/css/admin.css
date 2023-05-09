@@ -5,9 +5,6 @@ button {
     padding: 0;
 }
 
-a.buttonHome {
-    width: 65%;
-}
 
 
 [role="button"] {
@@ -65,4 +62,10 @@ a:is([aria-current], :hover, :active, :focus) {
 
 a:is([aria-current], :hover, :active, :focus) {
     text-decoration: none;
+}
+
+a.buttonHome {
+    width: 70vh;
+    height: 5vh;
+    font-size: large;
 }
