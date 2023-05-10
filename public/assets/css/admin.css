@@ -3,6 +3,7 @@ button {
     height: 2rem;
     font-size: 0.7rem;
     padding: 0;
+    color: var(--dark);
 }
 
 table{
@@ -29,6 +30,10 @@ a {
     width: 5rem;
     height: 2rem;
     margin: 1rem 5rem ;
+}
+
+a:hover {
+    color: var(--dark);
 }
 
 button.outline {
@@ -74,8 +79,8 @@ a:is([aria-current], :hover, :active, :focus) {
     text-decoration: none;
 }
 
-a:is([aria-current], :hover, :active, :focus) {
-    text-decoration: none;
+.container {
+    min-height: 100vh;
 }
 
 .btn-add-suppr {
@@ -86,11 +91,12 @@ a:is([aria-current], :hover, :active, :focus) {
     text-align: center;
 }  
 a.buttonHome {
-    width: 70vh;
-    height: 5vh;
+    width: 20rem;
+    height: 3rem;
     font-size: large;
     padding-top: 12px;
 }
+
 
 a.return {
     outline: solid var(--primary);

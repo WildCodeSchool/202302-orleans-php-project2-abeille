@@ -6,6 +6,14 @@ use App\Model\LinkManager;
 
 class AdminLinkController extends AbstractController
 {
+    public function index(): string
+    {
+        $linkManager = new LinkManager();
+        $links = $linkManager->selectAll();
+
+        return $this->twig->render('Admin/Link/adminIndex.html.twig', ['links' => $links]);
+    }
+
     private function validate(array $link): array
     {
         $errors = [];
