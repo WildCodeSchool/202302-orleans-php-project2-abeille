@@ -9,7 +9,6 @@
     --body: #FFFAE8;
     --transparent-body: #fffae888;
     --dark: #230a04;
-    --dark: #230a04;
 }
 
 :root {
@@ -21,10 +20,9 @@ html {
     background-color: var(--body);
 }
 
-.container-fluid {
+body {
     background-color: var(--body);
 }
-
 
 h1 {
     font-family: var(--font-title);
@@ -117,6 +115,7 @@ nav li {
     color: rgb(255, 0, 0);
 }
 
+
 .container {
     padding-bottom: 0;
 }
@@ -125,7 +124,6 @@ nav li {
 [role="button"] {
     width: 12rem;
     color: var(--dark);
-    margin-inline: 5rem;
 }
 
 [role="button"]:hover {
@@ -188,6 +186,16 @@ button:hover {
     font-weight: bold;
 }
 
+th {
+    border-bottom:  solid 3px var(--secondary);
+}
+
+td {
+    border-bottom:  solid 1px var(--secondary);
+}
+
+
+
 @media screen and (max-width: 760px) {
 
     .links {
@@ -216,7 +224,6 @@ button:hover {
 [role="button"] {
     width: 12rem;
     color: var(--dark);
-    margin-inline: 5rem; 
 }
 
 [role="button"]:hover {

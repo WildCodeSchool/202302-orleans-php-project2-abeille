@@ -21,7 +21,7 @@ return [
     'admin/image' => ['AdminPictureController', 'index'],
     'admin/image/ajouter' => ['AdminPictureController', 'add'],
     'admin/image/modifier' => ['AdminPictureController', 'update', ['id']],
-    'admin/event/index' => ['AdminEventController', 'index',],
+    'admin/event' => ['AdminEventController', 'index',],
     'admin/event/ajouter' => ['AdminEventController', 'add'],
     'admin/event/modifier' => ['AdminEventController', 'update', ['id']],
     'admin/event/supprimer' => ['AdminEventController', 'delete', ['id']],

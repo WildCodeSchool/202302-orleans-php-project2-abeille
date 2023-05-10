@@ -39,13 +39,14 @@ article img {
 
 p {
     padding: var(--block-spacing-horizontal) / 2;
+    font-size: smaller;
 }
 
-.date {
-    color: grey;
-    align-self: center;
-    
+.lieu {
+    font-weight: lighter;
+    font-size: smaller;
 }
+
 .card {
     display:flex;
     flex-direction: column;
