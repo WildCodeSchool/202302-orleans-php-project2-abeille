@@ -76,11 +76,6 @@ a:is([aria-current], :hover, :active, :focus) {
     text-decoration: none;
 }
 
-.btn-add {
-    display: flex;
-    justify-content:center ;
-    align-items: center;
-}
 
 a[role=button] {
     margin-left: 0;
