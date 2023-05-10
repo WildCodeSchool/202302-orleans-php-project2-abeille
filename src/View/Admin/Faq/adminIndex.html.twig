@@ -10,7 +10,7 @@
 {% block content %}
 	<main class="container">
 		<h1>Administration FAQ</h1>
-		<a role="button" href="/admin/faq/ajouter" >Ajouter</a>
+		<a class="btn-add" role="button" href="/admin/faq/ajouter">Ajouter</a>
 		<table>
 			<thead>
 				<tr>
@@ -25,11 +25,13 @@
 								<li>{{ faq.question }}</li>
 							</p>
 						</td>
-						<td class="btn-add-suppr">
-							<form action="/admin/faq/supprimer?id={{ faq.id }}" method="POST">
-								<button class="outline" name="id">Supprimer</button>
-							</form>
-							<a role="button" href="/admin/faq/modifier?id={{ faq.id }}" >Modifier</a>
+						<td>
+							<div class="btn-add-suppr">
+								<form action="/admin/faq/supprimer?id={{ faq.id }}" method="POST">
+									<button class="outline" name="id">Supprimer</button>
+								</form>
+								<a role="button" href="/admin/faq/modifier?id={{ faq.id }}" >Modifier</a>
+							</div>
 						</td>
 					</tr>
 				{% endfor %}

@@ -22,17 +22,20 @@
 				{% for partner in partners %}
 					<tr>
 						<td>{{ partner.name }}</td>
-						<td class="btn-add-suppr">
-							<form action="/admin/partenaire/supprimer?id={{ partner.id }}" method="POST">
-								<button class="outline" name="id">Supprimer</button>
-							</form>
-							<a role="button" href="/admin/partenaire/modifier?id={{ partner.id }}">Modifier</a>
+						<td>
+							<div class="btn-add-suppr">
+								<form action="/admin/partenaire/supprimer?id={{ partner.id }}" method="POST">
+									<button class="outline" name="id">Supprimer</button>
+								</form>
+								<a role="button" href="/admin/partenaire/modifier?id={{ partner.id }}">Modifier</a>
+							</div>	
 						</td>
 					</tr>
 				{% endfor %}
-				<a role="button" href="/admin">Retour</a>
+				
 			</tbody>
 		</table>
+		<a role="button" href="/admin">Retour</a>
 	</main>
 {% endblock %}
 {% block footer %}{% endblock %}
