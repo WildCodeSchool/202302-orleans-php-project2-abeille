@@ -89,6 +89,7 @@ a.buttonHome {
     width: 70vh;
     height: 5vh;
     font-size: large;
+    padding-top: 12px;
 }
 
 a.return {
