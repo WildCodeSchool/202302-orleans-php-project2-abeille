@@ -105,8 +105,10 @@ CREATE TABLE `faq` (
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `faq` (`question`, `answer`) VALUES
-('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac erat dui. In placerat orci. ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt.'),
-('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet arcu id eros suscipit ornare et eget urna. Vivamus. ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel odio id elit tempor semper.');
+('Quelle quantité de miel peut-on récolter avec une ruche ? ', 'En moyenne chaque ruche permet de récolter 20 kg de miel par an, soit 80 pots de 250g ou 160 pots de 125g. Vous pourrez ainsi faire plaisir à vos collaborateurs, vos clients, vos prospects. Sans compter que les très bonnes années, la récolte peut atteindre 80 kg pour une seule ruche.'),
+('Y-a-t’il des risques de piqûres ?', 'Il ne faut pas confondre la guêpe et le frelon, qui sont des insectes carnivores, avec l’abeille, qui se nourrit exclusivement d’eau, de pollen et de nectar. L’abeille est un insecte plutôt doux. Elle pique seulement si elle est attaquée ou dérangée, dans la ruche ou sur sa trajectoire d’envol. Réserver un endroit calme pour installer les ruches et les isoler sur les lieux fréquentés permet de se prémunir des risques de piqûres.'),
+('Où peut-on installer des ruches ?', 'Les ruches sont implantées à un endroit calme auquel vous n’avez pas besoin d’accéder quotidiennement : balcon, terrasse, jardins, espaces verts, toits…. Dans les lieux fréquentés par le public, les ruches sont isolées par un enclos ou une palissade de 2m de hauteur.'),
+('Où les abeilles vont-elles butiner en ville ?', 'Les abeilles butinent dans un rayon de 3km autour du rucher. Dès le premier jour d’installation, elles commencent à repérer les lieux et visiter les fleurs du quartier. En ville, la plus grande densité de végétaux mellifères se trouve dans les parcs et les jardins publics. Certains arbres des avenues sont également des sources nutritives pour les abeilles: robiniers, marronniers, tilleuls, sophora… En plus faible quantité, les balcons et terrasses privées peuvent fournir des essences intéressantes pour leur nectar et leur pollen.');
 
 CREATE TABLE `picture` (
   `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
