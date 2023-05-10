@@ -83,13 +83,28 @@ a:is([aria-current], :hover, :active, :focus) {
     min-height: 100vh;
 }
 
+
+a[role=button] {
+    margin-left: 0;
+    margin-right: 0;
+    margin-inline: 0;
+}
+
 .btn-add-suppr {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    padding: 0;
 }  
+
+.btn-add-suppr form{
+    margin-bottom: 0;
+}
+
+.btn-add-suppr a{
+    margin:0;
+}
+
 a.buttonHome {
     width: 20rem;
     height: 3rem;
