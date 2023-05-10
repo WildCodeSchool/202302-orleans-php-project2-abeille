@@ -113,3 +113,12 @@ a.return {
 .svgAdmin {
 fill: var(--dark);
 }
+
+th {
+    border-bottom:  solid 3px var(--secondary);
+}
+
+td {
+    border-bottom:  solid 1px var(--secondary);
+}
+
