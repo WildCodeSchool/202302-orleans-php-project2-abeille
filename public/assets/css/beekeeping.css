@@ -18,3 +18,20 @@
 .text {
     width: 50%;
 }
+
+@media screen and (max-width: 1000px) {
+    .flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .history img,
+    .honey img {
+        width: 100%;
+        margin-inline: auto;
+    }
+}
