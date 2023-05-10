@@ -34,4 +34,6 @@ a:is([aria-current], :hover, :active, :focus) {
     color: var(--primary);
 }
   
-
+details summary:focus:not([role="button"]) {
+    color: var(--light);
+}
