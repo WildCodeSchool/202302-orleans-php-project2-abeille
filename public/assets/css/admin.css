@@ -28,7 +28,7 @@ a.buttonHome {
 a {
     width: 5rem;
     height: 2rem;
-    margin: 1rem 5rem ;
+    margin: 0;
 }
 
 button.outline {
@@ -86,10 +86,9 @@ a:is([aria-current], :hover, :active, :focus) {
     text-align: center;
 }  
 a.buttonHome {
-    width: 70vh;
-    height: 5vh;
-    font-size: large;
-    padding-top: 12px;
+    width: fit-content;
+    font-size: large; 
+    margin-bottom: 2rem;
 }
 
 a.return {
