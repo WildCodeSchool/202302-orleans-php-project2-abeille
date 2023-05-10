@@ -1,9 +1,10 @@
 .history img,
 .honey img {
-    width: clamp(10rem, 100%, 25rem);
-    height: auto;
-    float: left;
-    margin: var(--spacing) ;
+    width: clamp(10rem, 100%, 30rem);
+    height: 20rem;
+    margin: var(--spacing);
+    padding-right: 0.5rem;
+    object-fit: cover;
 }
 
 .history,
@@ -15,8 +16,10 @@
     background-image: url("/assets/images/beekeepingHeader.jpg")
 }
 
-h1 {
-    text-align: center;
-    color: var(--secondary);
-    font-family: var(--fonttitle);
+.flex {
+    display: flex;
+}
+
+.text {
+    width: 50%;
 }

@@ -1,16 +1,10 @@
-.Physio img,
-.Description img {
-    width: clamp(10rem, 100%, 25rem);
-    height: auto;
-    float: left;
+.physio img,
+.description img {
+    width: clamp(10rem, 100%, 30rem);
+    height: 20rem;
     margin: var(--spacing) ;
     padding-right: 0.5rem;
     object-fit : cover;
-}
-
-.physio,
-.description {
-    font-size: larger;
 }
 
 #sous-titre {
@@ -25,4 +19,18 @@
 
 .header {
     background-image: url("../images/abeilles_abeilles.jpg")
+}
+
+h1 {
+    text-align: center;
+    color: var(--secondary);
+    font-family: var(--font-title);
+}
+
+.flex {
+    display: flex;
+}
+
+.text {
+    width : 50%;
 }

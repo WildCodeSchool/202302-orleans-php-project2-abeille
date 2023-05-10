@@ -40,6 +40,8 @@ article {
     border-radius: var(--border-radius);
     margin-top: 0;
     margin-bottom: 0;
+    box-shadow: 0.5rem 0.5rem 1rem -0.80rem rgba(83, 39, 0, 0.548);
+    border-radius: 8px;
 }
 
 article img {
@@ -54,11 +56,21 @@ article img {
     align-self: center;
     
 }
+
 .card {
     display:flex;
     flex-direction: column;
     --spacing: 0.10rem;
-    padding: var(--block-spacing-horizontal);
+    margin: 1rem;
+}
+
+.card>h2 {
+    height : 5rem;
+    font-family: var(--font-title);
+}
+
+.card>p {
+    margin-top: -10px;
 }
 
 article p:not(:first-of-type) {
@@ -71,4 +83,35 @@ article p:not(:first-of-type) {
 
 main section {
     padding: 1.5rem;
+}
+
+p {
+    padding: var(--block-spacing-horizontal) / 2;
+    font-size: smaller;
+}
+
+.date {
+    color: grey;
+    align-self: center;
+    
+}
+
+p.date {
+    align-self: flex-end;
+    align-items: start;
+    margin-top: -2.8rem;
+    font-weight: lighter;
+    font-size: smaller;
+}
+
+.lieu {
+    font-weight: lighter;
+    font-size: smaller;
+}
+
+.card {
+    display:flex;
+    flex-direction: column;
+    --spacing: 0.10rem;
+    padding: 0,2rem;
 }

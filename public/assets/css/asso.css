@@ -39,6 +39,7 @@ article img {
 
 p {
     padding: var(--block-spacing-horizontal) / 2;
+    font-size: smaller;
 }
 
 .date {
@@ -46,6 +47,20 @@ p {
     align-self: center;
     
 }
+
+p.date {
+    align-self: flex-end;
+    align-items: start;
+    margin-top: -2.8rem;
+    font-weight: lighter;
+    font-size: smaller;
+}
+
+.lieu {
+    font-weight: lighter;
+    font-size: smaller;
+}
+
 .card {
     display:flex;
     flex-direction: column;

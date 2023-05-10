@@ -81,7 +81,7 @@ class AdminEventController extends AbstractController
                 $event['id'] = $id;
                 $faqManager->update($event);
 
-                header('Location: /admin/event/index');
+                header('Location: /admin/event');
             }
         }
 
@@ -93,7 +93,7 @@ class AdminEventController extends AbstractController
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $eventManager = new eventManager();
             $eventManager->delete((int)$id);
-            header('Location:/admin/event/index');
+            header('Location:/admin/event');
         }
     }
 }
