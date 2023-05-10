@@ -1,9 +1,20 @@
-.Physio img,
-.Description img {
-    width: clamp(10rem, 100%, 25rem);
-    height: auto;
-    float: left;
+.physio img,
+.description img {
+    width: clamp(10rem, 100%, 30rem);
+    height: 20rem;
     margin: var(--spacing) ;
+    padding-right: 0.5rem;
+    object-fit : cover;
+}
+
+#sous-titre {
+    margin-top: -3rem;
+    margin-bottom: 3rem;
+}
+
+#sous-titre2 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .header {
@@ -14,4 +25,12 @@ h1 {
     text-align: center;
     color: var(--secondary);
     font-family: var(--font-title);
+}
+
+.flex {
+    display: flex;
+}
+
+.text {
+    width : 50%;
 }

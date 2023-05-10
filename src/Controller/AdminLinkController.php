@@ -6,6 +6,14 @@ use App\Model\LinkManager;
 
 class AdminLinkController extends AbstractController
 {
+    public function index(): string
+    {
+        $linkManager = new LinkManager();
+        $links = $linkManager->selectAll();
+
+        return $this->twig->render('Admin/Link/adminIndex.html.twig', ['links' => $links]);
+    }
+
     private function validate(array $link): array
     {
         $errors = [];
@@ -52,5 +60,15 @@ class AdminLinkController extends AbstractController
             }
         }
         return $this->twig->render('Admin/Link/adminAdd.html.twig', ['errors' => $errors, 'link' => $link]);
+    }
+
+    public function delete(int $id): void
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $linkManager = new LinkManager();
+            $linkManager->delete((int)$id);
+
+            header('Location:/admin/lien/index');
+        }
     }
 }

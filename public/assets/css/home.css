@@ -40,6 +40,8 @@ article {
     border-radius: var(--border-radius);
     margin-top: 0;
     margin-bottom: 0;
+    box-shadow: 0.5rem 0.5rem 1rem -0.80rem rgba(83, 39, 0, 0.548);
+    border-radius: 4px;
 }
 
 article img {
@@ -58,7 +60,15 @@ article img {
     display:flex;
     flex-direction: column;
     --spacing: 0.10rem;
-    padding: var(--block-spacing-horizontal);
+    margin: 1rem;
+}
+
+.card>h2 {
+    height : 5rem;
+}
+
+.card>p {
+    margin-top: -10px;
 }
 
 article p:not(:first-of-type) {

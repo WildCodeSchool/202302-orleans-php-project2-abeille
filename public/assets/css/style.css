@@ -17,7 +17,11 @@
     color: var(--dark);
 }
 
-.container-fluid {
+html {
+    background-color: var(--body);
+}
+
+body {
     background-color: var(--body);
 }
 
@@ -113,6 +117,7 @@ nav li {
     color: rgb(255, 0, 0);
 }
 
+
 .container {
     padding-bottom: 0;
 }
@@ -121,7 +126,6 @@ nav li {
 [role="button"] {
     width: 12rem;
     color: var(--dark);
-    margin-inline: 5rem;
 }
 
 [role="button"]:hover {
@@ -184,6 +188,7 @@ button:hover {
     font-weight: bold;
 }
 
+
 @media screen and (max-width: 760px) {
 
     .links {
@@ -203,4 +208,17 @@ button:hover {
         padding: 0.5rem;
         margin: calc(var(--nav-link-spacing-vertical) * 0.5);
     }
+}
+
+.container {
+    padding-bottom: 0;
+}
+
+[role="button"] {
+    width: 12rem;
+    color: var(--dark);
+}
+
+[role="button"]:hover {
+    background-color: var(--light);
 }
