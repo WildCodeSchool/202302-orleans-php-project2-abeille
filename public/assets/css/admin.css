@@ -29,7 +29,7 @@ a.buttonHome {
 a {
     width: 5rem;
     height: 2rem;
-    margin: 0;
+    margin:0;
 }
 
 a:hover {
@@ -106,10 +106,13 @@ a[role=button] {
 }
 
 a.buttonHome {
-    width: fit-content;
-    font-size: large; 
-    margin-bottom: 2rem;
+    width: 20rem;
+    height: 3rem;
+    font-size: large;
+    padding-top: 12px;
+    margin-bottom: 3rem;
 }
+
 
 a.return {
     outline: solid var(--primary);
@@ -117,6 +120,7 @@ a.return {
     width: 7rem;
     height: 2rem;
     margin-left: 0;
+    margin-bottom: 3rem;
     padding-top: 10px;
     
 }

@@ -21,11 +21,16 @@
     background-image: url("../images/abeilles_abeilles.jpg")
 }
 
+h1 {
+    text-align: center;
+    color: var(--secondary);
+    font-family: var(--font-title);
+}
+
 .flex {
     display: flex;
 }
 
 .text {
     width : 50%;
-
 }
