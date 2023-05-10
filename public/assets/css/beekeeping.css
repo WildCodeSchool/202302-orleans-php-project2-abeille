@@ -6,6 +6,11 @@
     margin: var(--spacing) ;
 }
 
+.history,
+.honey {
+    font-size: larger;
+}
+
 .header {
     background-image: url("/assets/images/beekeepingHeader.jpg")
 }

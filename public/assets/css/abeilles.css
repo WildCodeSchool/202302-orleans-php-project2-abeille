@@ -4,6 +4,23 @@
     height: auto;
     float: left;
     margin: var(--spacing) ;
+    padding-right: 0.5rem;
+    object-fit : cover;
+}
+
+.physio,
+.description {
+    font-size: larger;
+}
+
+#sous-titre {
+    margin-top: -3rem;
+    margin-bottom: 3rem;
+}
+
+#sous-titre2 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .header {
