@@ -46,6 +46,13 @@ p {
     align-self: center;
     
 }
+
+p.date {
+    align-self: flex-end;
+    align-items: start;
+    margin-top: -3rem;
+}
+
 .card {
     display:flex;
     flex-direction: column;
