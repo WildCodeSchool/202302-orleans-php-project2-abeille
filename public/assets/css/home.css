@@ -51,11 +51,6 @@ article img {
 
 }
 
-.date {
-    color: grey;
-    align-self: center;
-    
-}
 
 .card {
     display:flex;
@@ -104,6 +99,19 @@ p.date {
     font-size: smaller;
 }
 
+.dateHome {
+    color: grey;
+    align-self: center;
+}
+
+p.dateHome {
+    align-self: center;
+    align-items: start;
+    margin-top: -1rem;
+    font-weight: lighter;
+    font-size: smaller;
+}
+
 .lieu {
     font-weight: lighter;
     font-size: smaller;
@@ -114,4 +122,15 @@ p.date {
     flex-direction: column;
     --spacing: 0.10rem;
     padding: 0,2rem;
+}
+
+@media screen and (max-width:600px) {
+    
+    p.date {
+        align-self: center;
+        align-items: start;
+        margin-top: -1rem;
+        font-weight: lighter;
+        font-size: smaller;
+    }
 }
