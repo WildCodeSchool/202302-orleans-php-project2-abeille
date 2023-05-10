@@ -6,12 +6,19 @@ button {
     color: var(--dark);
 }
 
+table{
+margin-bottom: 0;
+}
+
+a.buttonHome {
+    width: 65%;
+}
 
 
 [role="button"] {
     color: var(--dark);
     font-size: 0.7rem;
-    padding: 0.5rem;
+    padding-top: 20px;
 }
 
 [role="button"]:hover {
@@ -33,6 +40,8 @@ button.outline {
     margin: 1rem 5rem ;
     background-color: var(--primary);
     color: var(--dark);
+    width: 10rem;
+    height: 3rem;
 }
 
 button.outline:hover{
@@ -52,13 +61,18 @@ th {
     margin-block: 1rem;
 }
 
+th,td{
+    --spacing:0.7rem;
+    padding: var(--spacing);
+}
+
 button:is([aria-current], :hover, :active, :focus) {
     border-color: var(--dark);
 }
 
 a[role="button"] {
-    width: 5rem;
-    height: 2rem;
+    width: 10rem;
+    height: 3rem;
 }
 
 a:is([aria-current], :hover, :active, :focus) {
@@ -69,9 +83,30 @@ a:is([aria-current], :hover, :active, :focus) {
     min-height: 100vh;
 }
 
+.btn-add-suppr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}  
 a.buttonHome {
     width: 20rem;
     height: 3rem;
     font-size: large;
     padding: 1rem;
+}
+
+a.return {
+    outline: solid var(--primary);
+    background-color: transparent;
+    width: 7rem;
+    height: 2rem;
+    margin-left: 0;
+    padding-top: 10px;
+    
+}
+
+.svgAdmin {
+fill: var(--dark);
 }

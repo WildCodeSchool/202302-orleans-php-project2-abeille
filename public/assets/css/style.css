@@ -17,6 +17,10 @@
     color: var(--dark);
 }
 
+html {
+    background-color: var(--body);
+}
+
 .container-fluid {
     background-color: var(--body);
 }

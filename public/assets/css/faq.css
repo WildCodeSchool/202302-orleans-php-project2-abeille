@@ -1,11 +1,11 @@
 details>p {
-    background: var(--dark);
+    background: var(--light);
     border: solid 1px var(--dark);
     margin-block-start: -20px;
     margin-inline: var(--spacing);
     padding: var(--spacing);
     border-radius: 5px;
-    color: var(--light);
+    color: var(--dark);
 }
 
 details {
@@ -21,7 +21,17 @@ summary {
 }
 
 details summary:not([role]) {
+    color: var(--light);
+    background-color: var(--secondary);
+}
+
+a {
     color: var(--dark);
+}
+
+a:is([aria-current], :hover, :active, :focus) {
+    text-decoration: none;
+    color: var(--primary);
 }
   
 
