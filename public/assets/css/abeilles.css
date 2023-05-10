@@ -7,6 +7,11 @@
     object-fit : cover;
 }
 
+.physio,
+.description {
+    font-size: larger;
+}
+
 #sous-titre {
     margin-top: -3rem;
     margin-bottom: 3rem;
@@ -33,4 +38,19 @@ h1 {
 
 .text {
     width : 50%;
+}
+
+@media screen and (max-width: 1000px) {
+    .flex {
+        display: flex;
+        flex-direction: column;
+    }
+    .text {
+        width: 100%;
+    }
+    .physio img,
+    .description img {
+        width: 100%;
+        margin-inline: auto;
+    }
 }

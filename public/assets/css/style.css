@@ -9,7 +9,6 @@
     --body: #FFFAE8;
     --transparent-body: #fffae888;
     --dark: #230a04;
-    --dark: #230a04;
 }
 
 :root {
@@ -24,7 +23,6 @@ html {
 body {
     background-color: var(--body);
 }
-
 
 h1 {
     font-family: var(--font-title);
